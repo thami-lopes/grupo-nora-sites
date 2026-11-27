@@ -1,3 +1,8 @@
+> **Repositório arquivado.** O código dos sites agora vive em um repositório por marca, na organização `contadoc-org`:
+> [`nora-group`](https://github.com/contadoc-org/nora-group) (Grupo Nora + News em `/news`, **o oficial do Grupo Nora**),
+> `nora-capital`, `nora-safe`, `noracare-site` (Care) e `nora-class` (Educação, Laravel).
+> Este repositório fica só como histórico e guarda as demonstrações antigas em `_arquivo/`.
+
 # Sites do Grupo Nora
 
 Cinco sites do Grupo Nora, cada um em sua pasta, independentes entre si, mais o blog **News**, que fica dentro do site do Grupo Nora em `/news`. Eles se ligam por links (menu, cartões "Nossas Marcas" e rodapés).
