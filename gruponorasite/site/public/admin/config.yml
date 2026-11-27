@@ -1,0 +1,55 @@
+# Painel de edição do News (Decap CMS) — cada artigo é um arquivo .md em content/news.
+# Salvar no painel cria um commit no GitHub; o site publica no próximo deploy.
+#
+# ATENÇÃO (TI): o login usa o GitHub e precisa de um servidor de OAuth.
+# Configure "base_url" abaixo (ou use outro backend, como Netlify Identity).
+# Veja https://decapcms.org/docs/backends-overview/
+backend:
+  name: github
+  repo: contadoc-org/nora-group
+  branch: main
+  # base_url: https://SEU-SERVIDOR-DE-OAUTH
+
+locale: pt
+media_folder: public/assets/news
+public_folder: /assets/news
+
+collections:
+  - name: news
+    label: News (artigos)
+    label_singular: Artigo
+    folder: content/news
+    extension: md
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: ["order", "title"]
+    fields:
+      - { label: Título, name: title, widget: string }
+      - { label: Resumo (aparece nos cards), name: excerpt, widget: text }
+      - { label: Em destaque (só 1 por vez), name: featured, widget: boolean, default: false }
+      - { label: Selo do destaque (ex.: Em destaque), name: badge, widget: string, required: false }
+      - label: Marca principal (define a cor do card)
+        name: brand
+        widget: select
+        options: [care, capital, safe, educacao, invest]
+      - { label: Linha acima do título (opcional), name: kicker, widget: string, required: false }
+      - label: Categorias (filtros do News)
+        name: categories
+        widget: list
+        hint: "Use exatamente: notícias, gestão hospitalar, seguros, contabilidade, finanças. Pode incluir também nora care, nora capital, nora safe, nora invest."
+      - label: Etiquetas dos cards
+        name: tags
+        widget: list
+        fields:
+          - { label: Texto, name: label, widget: string }
+          - label: Marca (cor da etiqueta; vazio = neutra)
+            name: brand
+            widget: select
+            required: false
+            options: [care, capital, safe, educacao]
+      - { label: Capa (opcional), name: cover, widget: image, required: false }
+      - { label: Data (opcional), name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { label: Ordem (sem data, menor aparece primeiro), name: order, widget: number, default: 100, value_type: int }
+      - { label: Rascunho (não publica), name: draft, widget: boolean, default: false }
+      - { label: Texto do artigo, name: body, widget: markdown }

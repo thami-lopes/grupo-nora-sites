@@ -8,5 +8,5 @@ export const SITE_LINKS = {
   care: "http://localhost:3001/",
   capital: "http://localhost:3002/",
   safe: "http://localhost:3003/",
-  news: "http://localhost:3004/",
+  news: "http://localhost:3000/news",
 };
