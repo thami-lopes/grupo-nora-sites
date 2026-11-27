@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nora Capital — Quem cuida de você, cuida do seu futuro.</title>
+<meta name="description" content="Gestão contábil, fiscal e financeira para médicos, clínicas e empresas. Abertura de PJ, contabilidade, consultoria tributária, BPO e muito mais.">
+<link rel="icon" href="assets/nora-symbol.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="progress-bar"><div class="progress-bar__fill" id="progressFill"></div></div>
+
+<!-- ===================== Header ===================== -->
+<header class="site-header" id="siteHeader">
+  <div class="site-header__inner">
+    <img class="site-header__logo" id="siteLogo" src="assets/nora-capital-horizontal.png" alt="Nora Capital">
+    <nav class="site-header__nav" aria-label="Navegação principal">
+      <a href="#sobre" data-nav-link data-target="sobre">Sobre nós</a>
+      <a href="#servicos" data-nav-link data-target="servicos">Serviços</a>
+      <a href="#contato" data-nav-link data-target="contato" data-offset="0">Contato</a>
+      <a href="http://localhost:3004/">News</a>
+      <a href="#faq" data-nav-link data-target="faq">FAQ</a>
+    </nav>
+    <div class="site-header__actions">
+      <a href="http://localhost:3000/" class="site-header__group-link" title="Voltar ao site do Grupo Nora">Grupo Nora <span style="font-size:12px;opacity:.55">↗</span></a>
+      <span class="site-header__divider"></span>
+      <a href="#contato" class="site-header__cta" data-nav-link data-target="contato" data-offset="0">Fale Conosco <span style="font-size:15px">→</span></a>
+      <button class="site-header__burger" id="burgerBtn" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile drawer -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="mobile-drawer__panel">
+    <div class="mobile-drawer__top">
+      <img src="assets/nora-capital-horizontal.png" alt="Nora Capital" style="height:20px">
+      <button class="mobile-drawer__close" id="drawerCloseBtn" aria-label="Fechar menu">×</button>
+    </div>
+    <nav class="mobile-drawer__nav">
+      <a href="#sobre" data-nav-link data-target="sobre">Sobre nós</a>
+      <a href="#servicos" data-nav-link data-target="servicos">Serviços</a>
+      <a href="#contato" data-nav-link data-target="contato" data-offset="0">Contato</a>
+      <a href="http://localhost:3004/">News</a>
+      <a href="#faq" data-nav-link data-target="faq">FAQ</a>
+    </nav>
+    <a href="http://localhost:3000/" class="mobile-drawer__group">Grupo Nora <span style="font-size:12px;opacity:.55">↗</span></a>
+    <a href="#contato" class="mobile-drawer__cta" data-nav-link data-target="contato" data-offset="0">Fale Conosco →</a>
+  </div>
+</div>
+
+<main>
+
+  <!-- ===================== Hero ===================== -->
+  <section class="hero-section">
+    <div class="hero-frame">
+      <video class="hero-frame__video" id="heroVideo" autoplay muted loop playsinline poster="assets/hero-nora-care-poster.png">
+        <source src="assets/hero-nora-care.mp4" type="video/mp4">
+      </video>
+      <div class="hero-frame__overlay"></div>
+      <img class="hero-frame__mark" src="assets/nora-symbol.png" alt="">
+      <div class="hero-frame__content">
+        <div data-reveal>
+          <div class="hero-badge"><span class="hero-badge__dot"></span><span>Nora Capital</span></div>
+          <h1 class="hero-title">Quem cuida de você, cuida do seu futuro.</h1>
+          <p class="hero-sub">Simplifique as burocracias da sua carreira e tenha mais tempo para o que realmente importa.</p>
+          <div class="hero-actions">
+            <a href="#sobre" class="btn btn-primary" data-nav-link data-target="sobre">Conheça <span style="font-size:17px">→</span></a>
+            <a href="#contato" class="btn btn-outline" data-nav-link data-target="contato" data-offset="0">Fale Conosco</a>
+          </div>
+          <div class="hero-chips">
+            <span>Abertura de PJ</span><span class="dot"></span>
+            <span>Gestão contábil</span><span class="dot"></span>
+            <span>Consultoria tributária</span>
+          </div>
+        </div>
+      </div>
+      <button class="hero-frame__play" id="heroPlayBtn" aria-label="Pausar vídeo institucional">
+        <span class="bars" id="heroPlayBars"><span></span><span></span></span>
+        <span id="heroPlayLabel">Pausar vídeo institucional</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ===================== Sobre nós ===================== -->
+  <section class="about-section" id="sobre">
+    <div class="about-card">
+      <div class="about-grid">
+        <div data-reveal="left">
+          <div class="badge badge--on-dark">Quem somos</div>
+          <p class="about-lead-kicker">Muito prazer, somos o</p>
+          <h2 class="about-title">Nora Capital</h2>
+          <div class="about-part-of">
+            <div class="about-part-of__label"><span>Parte do</span><span>Grupo Nora</span></div>
+            <span class="about-part-of__divider"></span>
+            <span class="about-part-of__text">ecossistema de soluções para a saúde</span>
+          </div>
+          <div>
+            <a href="#contato" class="btn" style="background:var(--bronze);color:var(--navy);height:52px;padding:0 26px;border-radius:13px;font-size:15.5px;transition:background 200ms,color 200ms" data-nav-link data-target="contato" data-offset="0" onmouseover="this.style.background='#fff'" onmouseout="this.style.background='var(--bronze)'">Fale Conosco <span style="font-size:16px">→</span></a>
+          </div>
+        </div>
+        <div class="about-right" data-reveal="right">
+          <p class="about-lead">Simplifique as burocracias da sua carreira com o <strong>Nora Capital</strong> e tenha mais tempo para o que realmente importa.</p>
+          <div class="about-columns">
+            <div><p>Nossos especialistas oferecem serviços personalizados para médicos em todas as fases — do recém-formado ao gestor de clínicas.</p></div>
+            <div><p>Com o Nora Capital, você conta com uma gestão contábil, fiscal e financeira completa e adaptada às suas necessidades.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Serviços ===================== -->
+  <section class="services-section" id="servicos">
+    <div class="container">
+      <div class="services-head" data-reveal>
+        <div>
+          <div class="badge" style="margin-bottom:18px">Serviços</div>
+          <h2>Soluções que trazem mais controle para a sua operação financeira.</h2>
+          <div class="services-head__eyebrow">05 serviços essenciais</div>
+        </div>
+        <div class="services-head__right">
+          <p>Da abertura da PJ ao imposto de renda: cuidamos da contabilidade, dos tributos e das notas fiscais para você focar na sua carreira.</p>
+          <a href="#contato" class="services-cta" data-nav-link data-target="contato" data-offset="0">Solicite um contato <span class="services-cta__arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card" data-reveal="scale">
+          <a href="#contato" class="service-card__inner" data-nav-link data-target="contato" data-offset="0">
+            <span class="service-card__bar"></span>
+            <div class="service-card__top"><span class="service-card__num">01</span><span class="service-card__dot"></span></div>
+            <h3>Abertura de PJ</h3>
+            <p>Abrimos, legalizamos e cadastramos sua PJ com rapidez e praticidade.</p>
+            <div class="service-card__cta">Saiba mais <span style="font-size:14px">→</span></div>
+          </a>
+        </article>
+        <article class="service-card" data-reveal="scale">
+          <a href="#contato" class="service-card__inner" data-nav-link data-target="contato" data-offset="0">
+            <span class="service-card__bar"></span>
+            <div class="service-card__top"><span class="service-card__num">02</span><span class="service-card__dot"></span></div>
+            <h3>Gestão Contábil da Empresa</h3>
+            <p>Cuidamos de todas as obrigações contábeis da sua PJ, evitando multas, atrasos e prejuízos, com custos reduzidos.</p>
+            <div class="service-card__cta">Saiba mais <span style="font-size:14px">→</span></div>
+          </a>
+        </article>
+        <article class="service-card" data-reveal="scale">
+          <a href="#contato" class="service-card__inner" data-nav-link data-target="contato" data-offset="0">
+            <span class="service-card__bar"></span>
+            <div class="service-card__top"><span class="service-card__num">03</span><span class="service-card__dot"></span></div>
+            <h3>Consultoria Tributária</h3>
+            <p>Analisamos sua fase de carreira para aplicar a melhor estratégia tributária e garantir o menor imposto possível.</p>
+            <div class="service-card__cta">Saiba mais <span style="font-size:14px">→</span></div>
+          </a>
+        </article>
+        <article class="service-card service-card--wide" data-reveal="scale">
+          <a href="#contato" class="service-card__inner" data-nav-link data-target="contato" data-offset="0">
+            <span class="service-card__bar"></span>
+            <div class="service-card__top"><span class="service-card__num">04</span><span class="service-card__dot"></span></div>
+            <h3>Imposto de Renda PF</h3>
+            <p>Cuidamos da sua declaração de Imposto de Renda Pessoa Física com total conformidade com as regras da Receita Federal.</p>
+            <div class="service-card__cta">Saiba mais <span style="font-size:14px">→</span></div>
+          </a>
+        </article>
+        <article class="service-card service-card--wide" data-reveal="scale">
+          <a href="#contato" class="service-card__inner" data-nav-link data-target="contato" data-offset="0">
+            <span class="service-card__bar"></span>
+            <div class="service-card__top"><span class="service-card__num">05</span><span class="service-card__dot"></span></div>
+            <h3>Emissão de Notas Fiscais</h3>
+            <p>Emitimos suas notas fiscais e enviamos diretamente por WhatsApp e e-mail. Zero burocracia para você.</p>
+            <div class="service-card__cta">Saiba mais <span style="font-size:14px">→</span></div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BPO ===================== -->
+  <section class="bpo-section">
+    <div class="bpo-head" data-reveal>
+      <div>
+        <div class="badge">BPO Nora</div>
+        <h2>Você foca em expandir seu negócio. Nós cuidamos das suas finanças.</h2>
+      </div>
+      <div>
+        <p><strong>Quer levar sua carreira para o próximo nível?</strong> Conte com o BPO nora para cuidar da gestão financeira do seu consultório ou clínica.</p>
+        <a href="#contato" class="services-cta" data-nav-link data-target="contato" data-offset="0">Solicite um contato <span style="font-size:15px">→</span></a>
+      </div>
+    </div>
+
+    <div class="bpo-panel" data-reveal id="bpoPanel">
+      <div class="bpo-panel__top">
+        <div class="bpo-panel__eyebrow">O que o BPO cobre</div>
+        <div class="bpo-panel__count" id="bpoCount">01 / 06</div>
+      </div>
+      <div class="bpo-body">
+        <div class="bpo-list" id="bpoList">
+          <button class="bpo-item is-active" data-name="BPO" data-text="Terceirizamos a gestão financeira da sua clínica para que você foque no que importa: seus pacientes.">
+            <span class="bpo-item__n">01</span><span class="bpo-item__name">BPO</span><span class="bpo-item__arrow">→</span>
+          </button>
+          <button class="bpo-item" data-name="Contabilidade" data-text="Rotinas contábeis completas da sua empresa, com apuração de impostos e obrigações entregues no prazo.">
+            <span class="bpo-item__n">02</span><span class="bpo-item__name">Contabilidade</span><span class="bpo-item__arrow">→</span>
+          </button>
+          <button class="bpo-item" data-name="Conciliação Bancária" data-text="Conferência diária de entradas e saídas, mantendo extratos e lançamentos sempre alinhados.">
+            <span class="bpo-item__n">03</span><span class="bpo-item__name">Conciliação Bancária</span><span class="bpo-item__arrow">→</span>
+          </button>
+          <button class="bpo-item" data-name="Gestão de Pagamentos" data-text="Contas a pagar e a receber organizadas, com fluxo de caixa previsível e sem atrasos.">
+            <span class="bpo-item__n">04</span><span class="bpo-item__name">Gestão de Pagamentos</span><span class="bpo-item__arrow">→</span>
+          </button>
+          <button class="bpo-item" data-name="Cobrança de Débitos" data-text="Emissão e acompanhamento de cobranças, reduzindo a inadimplência da sua operação.">
+            <span class="bpo-item__n">05</span><span class="bpo-item__name">Cobrança de Débitos</span><span class="bpo-item__arrow">→</span>
+          </button>
+          <button class="bpo-item" data-name="Business Intelligence" data-text="Relatórios e indicadores gerenciais para decisões rápidas e embasadas sobre o negócio.">
+            <span class="bpo-item__n">06</span><span class="bpo-item__name">Business Intelligence</span><span class="bpo-item__arrow">→</span>
+          </button>
+        </div>
+        <div class="bpo-detail">
+          <h3 id="bpoTitle">BPO</h3>
+          <p id="bpoText">Terceirizamos a gestão financeira da sua clínica para que você foque no que importa: seus pacientes.</p>
+          <div class="bpo-track"><span class="bpo-track__fill" id="bpoFill"></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="faq-section" id="faq">
+    <div class="faq-card" data-reveal>
+      <div class="faq-card__glow"></div>
+      <div class="faq-card__top-line"></div>
+      <div class="faq-grid">
+        <div class="faq-head">
+          <div class="badge" style="margin-bottom:18px">FAQ</div>
+          <h2>Perguntas Frequentes</h2>
+          <p>Ainda tem dúvidas? Solicite um atendimento de nossos especialistas e tire todas as suas dúvidas.</p>
+          <a href="#contato" class="faq-cta" data-nav-link data-target="contato" data-offset="0">Fale Conosco <span style="font-size:15px">→</span></a>
+        </div>
+        <div class="faq-list" id="faqList">
+
+          <div class="faq-item is-open">
+            <button class="faq-item__btn">
+              <span class="faq-item__num">01</span>
+              <span class="faq-item__q">O que é o Nora Capital e quais serviços ele oferece?</span>
+              <span class="faq-item__icon">+</span>
+            </button>
+            <div class="faq-item__panel">
+              <p>O <strong>Nora Capital</strong> é uma empresa especializada em contabilidade digital e BPO (Business Process Outsourcing), criada para ajudar empresas a simplificarem suas rotinas fiscais, contábeis e financeiras. Nossa atuação vai além da contabilidade tradicional: oferecemos soluções completas que incluem abertura e legalização de empresas, gestão contábil integral, consultoria tributária estratégica, emissão de notas fiscais, gestão de departamento pessoal e folha de pagamento, além da terceirização de processos financeiros e contábeis por meio do BPO. Com isso, nossos clientes conseguem manter a organização e a conformidade de suas operações enquanto dedicam mais tempo ao crescimento do negócio.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__btn">
+              <span class="faq-item__num">02</span>
+              <span class="faq-item__q">O que significa &ldquo;BPO&rdquo; e como ele funciona no Nora Capital?</span>
+              <span class="faq-item__icon">+</span>
+            </button>
+            <div class="faq-item__panel">
+              <p>BPO é a sigla para <strong>Business Process Outsourcing</strong>, que significa terceirização de processos de negócio. No contexto do Nora Capital, isso representa a transferência das rotinas contábeis e financeiras da sua empresa para um time especializado. Na prática, nossa equipe assume atividades como gestão de contas a pagar e receber, conciliação bancária, organização do fluxo financeiro, emissão de cobranças e produção de relatórios gerenciais. Ao cuidar dessas rotinas administrativas e burocráticas, conseguimos trazer mais organização e eficiência para o dia a dia da empresa, permitindo que o empreendedor concentre sua energia em decisões estratégicas e no desenvolvimento do negócio.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__btn">
+              <span class="faq-item__num">03</span>
+              <span class="faq-item__q">Qual a diferença entre contabilidade tradicional e BPO?</span>
+              <span class="faq-item__icon">+</span>
+            </button>
+            <div class="faq-item__panel">
+              <p>A contabilidade tradicional tem como principal objetivo garantir que a empresa esteja em conformidade com suas obrigações legais e fiscais, realizando registros contábeis, apuração de impostos e envio de declarações obrigatórias. Já o <strong>BPO contábil e financeiro</strong> amplia esse papel ao atuar de forma mais estratégica. Nesse modelo, os dados financeiros e contábeis são integrados para gerar análises e relatórios que ajudam na tomada de decisões. Além disso, processos são automatizados com o uso de tecnologia, trazendo mais eficiência operacional e oferecendo uma visão mais completa da saúde financeira da empresa.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__btn">
+              <span class="faq-item__num">04</span>
+              <span class="faq-item__q">Quem pode contratar os serviços do Nora Capital?</span>
+              <span class="faq-item__icon">+</span>
+            </button>
+            <div class="faq-item__panel">
+              <p>Os serviços do Nora Capital são indicados para diferentes perfis de clientes que desejam profissionalizar sua gestão financeira e contábil. Atendemos profissionais liberais, médicos e clínicas de saúde, além de pequenas, médias e grandes empresas. Também somos uma excelente solução para empreendedores que buscam automatizar seus processos administrativos ou reduzir custos operacionais ao contar com uma equipe especializada cuidando de suas rotinas financeiras e contábeis.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__btn">
+              <span class="faq-item__num">05</span>
+              <span class="faq-item__q">O Nora Capital também cuida da emissão de notas fiscais?</span>
+              <span class="faq-item__icon">+</span>
+            </button>
+            <div class="faq-item__panel">
+              <p>Sim. O Nora Capital também oferece suporte completo na <strong>emissão de notas fiscais eletrônicas (NF-e)</strong>. Nossa equipe pode realizar a emissão e enviar os documentos diretamente para o cliente por e-mail ou outros canais digitais, como WhatsApp. Esse processo ajuda a reduzir erros operacionais e elimina a necessidade de atividades manuais que costumam consumir tempo na rotina administrativa das empresas.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__btn">
+              <span class="faq-item__num">06</span>
+              <span class="faq-item__q">Vocês fazem a gestão de funcionários e folha de pagamento?</span>
+              <span class="faq-item__icon">+</span>
+            </button>
+            <div class="faq-item__panel">
+              <p>Sim. O Nora Capital conta com uma equipe especializada em <strong>Departamento Pessoal</strong>, responsável por administrar todas as rotinas relacionadas à gestão de colaboradores. Isso inclui a contratação e registro de funcionários, a elaboração da folha de pagamento mensal, o gerenciamento de férias e décimo terceiro salário, além do cálculo e recolhimento de encargos trabalhistas e impostos relacionados ao quadro de pessoal. Dessa forma, garantimos que todas as obrigações trabalhistas sejam cumpridas corretamente e dentro dos prazos legais.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__btn">
+              <span class="faq-item__num">07</span>
+              <span class="faq-item__q">Qual a vantagem de contratar o BPO contábil do Nora Capital?</span>
+              <span class="faq-item__icon">+</span>
+            </button>
+            <div class="faq-item__panel">
+              <p>Ao contratar o BPO contábil do Nora Capital, a empresa passa a contar com um time especializado dedicado à organização e gestão das rotinas financeiras e contábeis. Isso traz diversos benefícios, como economia de tempo, maior segurança jurídica, redução de custos operacionais e processos mais eficientes por meio da automação. Além disso, a empresa passa a ter acesso a relatórios e análises financeiras que contribuem para decisões mais estratégicas e embasadas.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__btn">
+              <span class="faq-item__num">08</span>
+              <span class="faq-item__q">O Nora Capital oferece consultoria tributária?</span>
+              <span class="faq-item__icon">+</span>
+            </button>
+            <div class="faq-item__panel">
+              <p>Sim. O Nora Capital também oferece <strong>consultoria tributária</strong>, com o objetivo de ajudar empresas a estruturarem sua operação de forma mais eficiente do ponto de vista fiscal. Nossa equipe analisa o perfil do negócio para indicar o regime tributário mais adequado, identificar oportunidades de redução da carga tributária dentro da legalidade e garantir que todas as obrigações fiscais estejam sendo cumpridas corretamente.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__btn">
+              <span class="faq-item__num">09</span>
+              <span class="faq-item__q">Como o Nora Capital me ajuda a ter mais controle financeiro?</span>
+              <span class="faq-item__icon">+</span>
+            </button>
+            <div class="faq-item__panel">
+              <p>O Nora Capital utiliza ferramentas digitais que permitem acompanhar a situação financeira da empresa de forma clara e organizada. Por meio de dashboards integrados e relatórios gerenciais intuitivos, o cliente passa a ter uma visão completa de suas finanças, incluindo acompanhamento de receitas e despesas, controle de contas a pagar e receber e indicadores que demonstram a saúde financeira do negócio. Esse nível de transparência facilita a gestão e permite decisões mais rápidas e seguras.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Fale Conosco ===================== -->
+  <section class="contact-section" id="contato">
+    <div class="contact-card">
+      <div class="contact-grid">
+        <div class="contact-info" data-reveal>
+          <div class="contact-info__card">
+            <div class="contact-eyebrow">Fale Conosco</div>
+            <h2>Tudo em um só lugar.</h2>
+            <div class="contact-rows">
+              <a class="contact-row" href="https://wa.me/5521980818818?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener">
+                <span class="contact-row__icon"><svg viewBox="0 0 20 20" style="width:20px;height:20px;display:block" aria-hidden="true"><path d="M4.5 3.5h3l1.2 3-1.7 1.3a10.5 10.5 0 0 0 4.7 4.7l1.3-1.7 3 1.2v3c0 .6-.5 1.1-1.1 1A13.4 13.4 0 0 1 3.5 4.6c-.1-.6.4-1.1 1-1.1Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="none"/></svg></span>
+                <span class="contact-row__meta"><span class="contact-row__label">Fone/WhatsApp</span><span class="contact-row__value">(21) 98081-8818</span></span>
+              </a>
+              <a class="contact-row" href="mailto:contato@gruponora.com.br">
+                <span class="contact-row__icon"><svg viewBox="0 0 20 20" style="width:20px;height:20px;display:block" aria-hidden="true"><rect x="2.6" y="4.2" width="14.8" height="11.6" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="m3.4 5.6 6.6 4.7 6.6-4.7" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span>
+                <span class="contact-row__meta"><span class="contact-row__label">E-mail</span><span class="contact-row__value">contato@gruponora.com.br</span></span>
+              </a>
+              <div class="contact-row">
+                <span class="contact-row__icon"><svg viewBox="0 0 20 20" style="width:20px;height:20px;display:block" aria-hidden="true"><path d="M10 17.5s5.5-5 5.5-9a5.5 5.5 0 1 0-11 0c0 4 5.5 9 5.5 9Z" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span>
+                <span class="contact-row__meta"><span class="contact-row__label">Endereço</span><span class="contact-row__value">Rua Teste Exemplo, 123<br>Rio de Janeiro/RJ<br>CEP 12345-678</span></span>
+              </div>
+            </div>
+          </div>
+          <div class="contact-social">
+            <span class="contact-social__item" role="button" tabindex="0" aria-label="Instagram"><svg viewBox="0 0 20 20" style="width:24px;height:24px;display:block" aria-hidden="true"><rect x="3.2" y="3.2" width="13.6" height="13.6" rx="4" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="10" cy="10" r="3.4" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="14.1" cy="5.9" r="1" fill="currentColor"/></svg></span>
+            <span class="contact-social__item" role="button" tabindex="0" aria-label="Facebook"><svg viewBox="0 0 20 20" style="width:24px;height:24px;display:block" aria-hidden="true"><path d="M12.6 6.6h-1.4c-.6 0-1 .4-1 1v1.7h2.3l-.4 2.4h-1.9v5.1H7.7v-5.1H6V9.3h1.7V7.5c0-1.9 1.1-3.2 3-3.2h1.9v2.3Z" fill="currentColor"/></svg></span>
+            <span class="contact-social__item" role="button" tabindex="0" aria-label="LinkedIn"><svg viewBox="0 0 20 20" style="width:24px;height:24px;display:block" aria-hidden="true"><rect x="3.4" y="3.4" width="13.2" height="13.2" rx="2.4" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M6.9 8.6v5m0-7.1v.1M9.7 13.6V10a1.6 1.6 0 0 1 3.2 0v3.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg></span>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" data-reveal novalidate>
+          <div class="contact-form__fields">
+            <div class="field">
+              <label for="df-nome">Nome *</label>
+              <input data-field id="df-nome" name="nome" type="text" placeholder="Seu nome">
+            </div>
+            <div class="field">
+              <label for="df-email">E-mail *</label>
+              <input data-field id="df-email" name="email" type="email" placeholder="voce@email.com">
+            </div>
+            <div class="field">
+              <label for="df-tel">Telefone ou WhatsApp *</label>
+              <input data-field id="df-tel" name="telefone" type="tel" placeholder="(00) 00000-0000">
+            </div>
+            <div class="field">
+              <label for="df-msg">Como podemos ajudar? *</label>
+              <textarea data-field id="df-msg" name="mensagem" rows="4" placeholder="Conte pra gente"></textarea>
+            </div>
+            <button type="submit" class="submit-btn" id="submitBtn">
+              <span class="submit-btn__spinner" id="submitSpinner" hidden></span>
+              <span id="submitLabel">Enviar</span>
+            </button>
+            <div class="form-msg form-msg--error" id="formError" hidden>Campo obrigatório.</div>
+            <div class="form-msg form-msg--success" id="formSuccess" hidden>
+              <span class="check">✓</span>Mensagem enviada. <span class="note">· microcopy provisória</span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== Footer ===================== -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="assets/nora-capital-horizontal.png" alt="Nora Capital">
+      <p>Gestão contábil, fiscal e financeira para médicos, clínicas e empresas.</p>
+      <a href="#contato" class="footer-cta" data-nav-link data-target="contato" data-offset="0">Fale Conosco <span style="font-size:15px">→</span></a>
+    </div>
+    <div>
+      <div class="footer-col-title">Serviços</div>
+      <div class="footer-links">
+        <a href="#servicos" data-nav-link data-target="servicos">Abertura de PJ</a>
+        <a href="#servicos" data-nav-link data-target="servicos">Gestão Contábil da Empresa</a>
+        <a href="#servicos" data-nav-link data-target="servicos">Consultoria Tributária</a>
+        <a href="#servicos" data-nav-link data-target="servicos">Imposto de Renda PF</a>
+        <a href="#servicos" data-nav-link data-target="servicos">Emissão de Notas Fiscais</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Institucional</div>
+      <div class="footer-links">
+        <a href="http://localhost:3004/">News</a>
+        <a href="#sobre" data-nav-link data-target="sobre">Sobre nós</a>
+        <a href="#faq" data-nav-link data-target="faq">FAQ</a>
+        <a href="http://localhost:3000/">Grupo Nora <span style="font-size:12px;opacity:.6">↗</span></a>
+        <a href="#contato" data-nav-link data-target="contato" data-offset="0">Fale Conosco</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Legal</div>
+      <div class="footer-links">
+        <a href="#">Política de privacidade</a>
+        <a href="#contato" data-nav-link data-target="contato" data-offset="0">Fale Conosco</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-ecosystem">
+    <span class="footer-ecosystem__label">Ecossistema Grupo Nora</span>
+    <a href="http://localhost:3001/" class="footer-brand-pill" style="--pill:#92E0CD"><span class="footer-brand-pill__dot" style="background:#92E0CD"></span><span>Nora Care</span></a>
+    <a href="#top" class="footer-brand-pill js-back-to-top" aria-current="page" style="--pill:#BC9466"><span class="footer-brand-pill__dot" style="background:#BC9466"></span><span>Nora Capital</span></a>
+    <a href="http://localhost:3003/" class="footer-brand-pill" style="--pill:#9FA7BB"><span class="footer-brand-pill__dot" style="background:#9FA7BB"></span><span>Nora Safe</span></a>
+    <a href="http://localhost:3005/" class="footer-brand-pill" style="--pill:#EF8F53"><span class="footer-brand-pill__dot" style="background:#EF8F53"></span><span>Nora Educação</span></a>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-bottom__copy">2026 Grupo Nora. All Rights Reserved.</div>
+    <div class="footer-bottom__links">
+      <a href="#servicos" data-nav-link data-target="servicos">Serviços</a>
+      <span class="footer-bottom__sep"></span>
+      <a href="http://localhost:3004/">Blog</a>
+      <span class="footer-bottom__sep"></span>
+      <a href="#top" id="backToTop" class="js-back-to-top">Voltar ao topo ↑</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

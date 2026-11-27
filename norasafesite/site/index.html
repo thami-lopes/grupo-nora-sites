@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nora Safe — Para quem não pode falhar, uma proteção que não falha.</title>
+<meta name="description" content="O Nora Safe oferece soluções com foco total nas necessidades da área médica: planos de saúde, blindagem médica, renda protegida e muito mais.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="top" style="position:absolute;top:0"></div>
+
+<div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
+
+<header id="site-header" class="header">
+  <div class="header-inner">
+    <a href="#top" class="header-logo"><img id="header-logo-img" src="assets/nora-safe-horizontal.png" alt="Nora Safe"></a>
+    <nav id="site-nav" class="nav">
+      <a href="#sobre" class="nav-link">Sobre nós</a>
+      <a href="#servicos" class="nav-link">Serviços</a>
+      <a href="#contato" class="nav-link">Contato</a>
+      <a href="http://localhost:3004/" class="nav-link">News</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+    </nav>
+    <div class="header-actions">
+      <a href="http://localhost:3000/" title="Voltar ao site do Grupo Nora" class="btn-outline-ghost">Grupo Nora <span class="arrow-mini">↗</span></a>
+      <span class="header-divider"></span>
+      <a id="header-cta" href="#contato" class="btn-primary">Fale Conosco <span class="arrow">→</span></a>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+  <nav class="mobile-drawer-nav">
+    <a href="#sobre" class="mobile-drawer-link">Sobre nós</a>
+    <a href="#servicos" class="mobile-drawer-link">Serviços</a>
+    <a href="#contato" class="mobile-drawer-link">Contato</a>
+    <a href="http://localhost:3004/" class="mobile-drawer-link">News</a>
+    <a href="#faq" class="mobile-drawer-link">FAQ</a>
+    <a href="http://localhost:3000/" class="mobile-drawer-link">Grupo Nora ↗</a>
+  </nav>
+  <a href="#contato" class="btn-primary mobile-drawer-cta">Fale Conosco <span class="arrow">→</span></a>
+</div>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-frame">
+      <video id="hero-video" class="hero-video" autoplay muted loop playsinline poster="assets/hero-nora-care-poster.png">
+        <source src="assets/hero-nora-care.mp4" type="video/mp4">
+      </video>
+      <div class="hero-scrim"></div>
+      <img class="hero-mark" src="assets/nora-symbol.png" alt="">
+      <div class="hero-copy-wrap">
+        <div id="hero-copy" class="hero-copy">
+          <div class="eyebrow-pill"><span class="eyebrow-dot"></span><span>Nora Safe</span></div>
+          <h1 class="hero-title">Para quem não pode falhar, uma proteção que não falha.</h1>
+          <p class="hero-lead">O Nora Safe oferece soluções com foco total nas necessidades da área médica.</p>
+          <div class="hero-actions">
+            <a href="#sobre" class="btn-primary btn-lg">Conheça <span class="arrow">→</span></a>
+            <a href="#contato" class="btn-outline btn-lg">Fale Conosco</a>
+          </div>
+          <div class="hero-tags">
+            <span>Planos de saúde</span><span class="dot"></span><span>Blindagem médica</span><span class="dot"></span><span>Renda protegida</span>
+          </div>
+        </div>
+      </div>
+      <button id="video-toggle" class="video-toggle" aria-label="Pausar vídeo institucional">
+        <span class="pause-icon"><span></span><span></span></span>
+        <span class="play-icon" hidden></span>
+        <span class="video-toggle-label">Pausar vídeo institucional</span>
+      </button>
+    </div>
+  </section>
+
+  <section id="sobre" class="sobre">
+    <div class="sobre-panel reveal" data-from="up">
+      <div class="sobre-grid">
+        <div class="reveal" data-from="left">
+          <div class="eyebrow-pill eyebrow-pill--dark">Quem somos</div>
+          <p class="sobre-kicker">Muito prazer, somos o</p>
+          <h2 class="sobre-title">Nora Safe</h2>
+          <div class="sobre-group-chip">
+            <div class="sobre-group-chip-text">
+              <span class="sobre-group-chip-label">Parte do</span>
+              <span class="sobre-group-chip-name">Grupo Nora</span>
+            </div>
+            <span class="sobre-group-chip-divider"></span>
+            <span class="sobre-group-chip-desc">ecossistema de soluções para a saúde</span>
+          </div>
+          <a href="#contato" class="btn-accent">Fale Conosco <span class="arrow">→</span></a>
+        </div>
+        <div class="sobre-right reveal" data-from="right" data-delay="120">
+          <p class="sobre-lead">Médicos lidam diariamente com grandes responsabilidades — por isso, ter a proteção certa faz toda a diferença.</p>
+          <div class="sobre-cards">
+            <div class="sobre-card sobre-card--accent">
+              <p><strong>Nora Safe</strong> oferece soluções com foco total nas necessidades da área médica.</p>
+            </div>
+            <div class="sobre-card">
+              <p>Criamos pacotes personalizados que vão de planos de saúde à responsabilidade civil profissional, garantindo proteção completa para você e seu patrimônio.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos" class="servicos">
+    <div class="servicos-inner">
+      <div class="servicos-head reveal" data-from="up">
+        <div class="servicos-head-text">
+          <div class="eyebrow-pill">Serviços</div>
+          <h2 class="servicos-title">Soluções que trazem mais controle para a sua proteção.</h2>
+          <div class="servicos-count">06 soluções</div>
+        </div>
+        <a href="#contato" class="btn-primary btn-cta-shift">Receba um atendimento <span class="arrow">→</span></a>
+      </div>
+      <div class="servicos-grid">
+        <article class="svc-card reveal" data-from="scale" data-delay="0">
+          <span class="svc-bar"></span>
+          <div class="svc-head"><span class="svc-num">01</span><span class="svc-dot"></span></div>
+          <h3>Soluções Centralizadas</h3>
+          <p>Simplifique sua gestão de seguros. Na Nora Safe, unificamos sua proteção com projetos estratégicos, tranquilidade e preços competitivos.</p>
+        </article>
+        <article class="svc-card reveal" data-from="scale" data-delay="70">
+          <span class="svc-bar"></span>
+          <div class="svc-head"><span class="svc-num">02</span><span class="svc-dot"></span></div>
+          <h3>Gerente Exclusivo</h3>
+          <p>Atendimento personalizado em uma única ponta. Seu gerente analisa seu perfil e identifica os produtos ideais para criar um plano sob medida.</p>
+        </article>
+        <article class="svc-card reveal" data-from="scale" data-delay="140">
+          <span class="svc-bar"></span>
+          <div class="svc-head"><span class="svc-num">03</span><span class="svc-dot"></span></div>
+          <h3>Blindagem Médica</h3>
+          <p>Proteção jurídica para sua carreira. Analisamos sua rotina para definir o melhor seguro de Responsabilidade Civil, protegendo seu CRM e seu patrimônio.</p>
+        </article>
+        <article class="svc-card reveal" data-from="scale" data-delay="210">
+          <span class="svc-bar"></span>
+          <div class="svc-head"><span class="svc-num">04</span><span class="svc-dot"></span></div>
+          <h3>Renda Protegida</h3>
+          <p>Garanta sua estabilidade financeira mesmo em imprevistos de saúde. Oferecemos seguros personalizados que repõem sua renda mensal em caso de afastamento por doença.</p>
+        </article>
+        <article class="svc-card reveal" data-from="scale" data-delay="280">
+          <span class="svc-bar"></span>
+          <div class="svc-head"><span class="svc-num">05</span><span class="svc-dot"></span></div>
+          <h3>Planos de Saúde</h3>
+          <p>Parceria com todas as operadoras do mercado. Seu gerente analisa suas necessidades e as de sua família para encontrar a melhor cobertura com as condições mais vantajosas.</p>
+        </article>
+        <article class="svc-card reveal" data-from="scale" data-delay="350">
+          <span class="svc-bar"></span>
+          <div class="svc-head"><span class="svc-num">06</span><span class="svc-dot"></span></div>
+          <h3>Soluções Completas</h3>
+          <p>Do seguro pet à proteção de embarcações, resolvemos qualquer demanda. Na Nora Safe, você encontra uma gama completa de soluções para todas as suas necessidades.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="faq">
+    <div class="faq-panel reveal" data-from="up">
+      <div class="faq-glow"></div>
+      <div class="faq-grid">
+        <div class="faq-intro">
+          <div class="eyebrow-pill">FAQ</div>
+          <h2>Perguntas Frequentes</h2>
+          <p>Ainda tem dúvidas? Solicite um atendimento de nossos especialistas e tire todas as suas dúvidas.</p>
+          <a href="#contato" class="btn-primary">Fale Conosco <span class="arrow">→</span></a>
+        </div>
+        <div class="faq-list" id="faq-list">
+          <div class="faq-item" data-faq-open>
+            <button class="faq-btn" aria-expanded="true">
+              <span class="faq-num">01</span>
+              <span class="faq-q">O que é o Nora Safe e por que eu precisaria dos serviços de seguros oferecidos por ela?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-panel-inner">
+              <p>O <strong>Nora Safe</strong> é uma corretora de seguros especializada em oferecer proteção completa adaptada às necessidades individuais e profissionais de cada cliente. Em um mundo cada vez mais incerto, contar com soluções de seguros personalizadas significa ter tranquilidade para enfrentar imprevistos, proteger o patrimônio, a carreira e a saúde, tudo com respaldo de especialistas que conhecem a fundo o mercado e trabalham com as principais seguradoras do país.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-btn" aria-expanded="false">
+              <span class="faq-num">02</span>
+              <span class="faq-q">Quais tipos de seguros vocês oferecem e como são escolhidos?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-panel-inner">
+              <p>No Nora Safe, o processo começa por uma análise cuidadosa do seu perfil por um gerente dedicado, que entende suas particularidades e monta um pacote de seguros adequado às suas necessidades. Isso pode incluir desde <strong>seguros de proteção profissional</strong>, como cobertura contra riscos da carreira, até <strong>planos de saúde</strong>, <strong>diária de incapacidade</strong>, <strong>previdência privada</strong> e até coberturas específicas para situações pessoais ou patrimoniais. Em vez de diversos corretores, você tem tudo centralizado em um único ponto de contato com propostas personalizadas e preços competitivos.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-btn" aria-expanded="false">
+              <span class="faq-num">03</span>
+              <span class="faq-q">O que significa ter um gerente exclusivo no Nora Safe?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-panel-inner">
+              <p>Ter um gerente exclusivo significa que você não será mais apenas um número. Um especialista vai conhecer a fundo sua realidade — seja como profissional, empreendedor ou titular de um negócio — e, com isso, criar um plano de seguros pensado especialmente para você. Esse gerente cuida de toda a jornada, desde a escolha das coberturas até eventuais ajustes futuros, garantindo sempre que suas proteções acompanhem suas mudanças de vida e de carreira.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-btn" aria-expanded="false">
+              <span class="faq-num">04</span>
+              <span class="faq-q">Por que é importante ter seguros mesmo quando eu me considero uma pessoa cuidadosa e organizada?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-panel-inner">
+              <p>Mesmo quem tem uma vida organizada pode enfrentar eventos inesperados — como um afastamento por saúde, um processo jurídico ou uma necessidade de emitir despesas médicas ou de patrimônio — que podem impactar profundamente sua estabilidade financeira e emocional. Contratar seguros adequados é uma forma de blindar sua rotina e preservar o que você conquistou, além de garantir amparo para sua família ou colaboradores caso algo saia do planejado. No Nora Safe, nossos produtos são pensados especificamente para oferecer esse tipo de segurança.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-btn" aria-expanded="false">
+              <span class="faq-num">05</span>
+              <span class="faq-q">O seguro de saúde oferecido pelo Nora Safe é diferente de um plano de saúde tradicional?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-panel-inner">
+              <p>Sim. Embora ambos visem proteger sua saúde, o seguro de saúde oferecido pelo Nora Safe é negociado diretamente com operadoras parceiras para encontrar coberturas que atendam seu perfil e sua família com condições competitivas. Isso significa que você pode ter um plano mais alinhado ao que realmente precisa, com opções de cobertura que muitas vezes vão além das soluções padrões do mercado.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-btn" aria-expanded="false">
+              <span class="faq-num">06</span>
+              <span class="faq-q">Como o Nora Safe pode ajudar se eu precisar de renda durante um afastamento por doença ou acidente?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-panel-inner">
+              <p>Um dos produtos que nossa corretora oferece é o seguro de <strong>diária de incapacidade</strong>, que garante uma renda mensal caso você precise se afastar do trabalho por questões de saúde. Isso garante que, mesmo em situações difíceis, você não fica sem o suporte financeiro necessário para manter suas responsabilidades e seu bem-estar.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-btn" aria-expanded="false">
+              <span class="faq-num">07</span>
+              <span class="faq-q">O Nora Safe protege apenas profissionais da saúde ou atende a outros perfis também?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-panel-inner">
+              <p>Embora a origem da oferta de seguros da plataforma esteja muito ligada a profissionais com demandas específicas — especialmente na saúde — a proposta do Nora Safe é atender a uma ampla gama de pessoas e empresas. Isso significa que, independentemente da sua área de atuação ou estilo de vida, você pode encontrar soluções de seguros que protejam seus bens, sua carreira e seus projetos de vida.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-btn" aria-expanded="false">
+              <span class="faq-num">08</span>
+              <span class="faq-q">É difícil contratar um seguro com o Nora Safe?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-panel-inner">
+              <p>Não. Nosso processo é criado para ser claro e descomplicado. Você faz uma avaliação inicial com um de nossos especialistas, que entende suas necessidades e, com isso, apresenta as melhores opções de seguros disponíveis no mercado. A partir daí, a contratação é orientada passo a passo pelo seu gerente, com explicações claras sobre coberturas, prazos e valores.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-btn" aria-expanded="false">
+              <span class="faq-num">09</span>
+              <span class="faq-q">O que devo fazer quando precisar acionar meu seguro?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-panel-inner">
+              <p>Quando acontecer um evento coberto pelo seu seguro — como um sinistro, um afastamento ou uma necessidade de atendimento médico — você deve entrar em contato com a seguradora responsável pela apólice, e nós do Nora Safe estamos aqui para orientar e acompanhar todo o processo, garantindo que seus direitos sejam respeitados e que você receba o suporte necessário.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-btn" aria-expanded="false">
+              <span class="faq-num">10</span>
+              <span class="faq-q">Por que vale a pena contar com um consultor de seguros ao invés de contratar direto com a seguradora?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-panel-inner">
+              <p>Um consultor atua como um parceiro: ele analisa diversas opções no mercado para encontrar as melhores coberturas e preços, levando em conta suas particularidades pessoais ou profissionais. Além disso, o seu consultor Nora Safe oferece suporte contínuo — desde a escolha da apólice até o acompanhamento em momentos de uso do seguro — algo que normalmente não está disponível ao lidar diretamente com uma seguradora.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="contato">
+    <div class="contato-panel">
+      <div class="contato-grid">
+        <div class="contato-left reveal" data-from="up">
+          <div class="contato-card">
+            <div class="eyebrow-pill">Fale Conosco</div>
+            <h2>Tudo em um só lugar.</h2>
+            <div class="contato-list">
+              <a href="https://wa.me/5521980818818?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener" class="contato-row">
+                <span class="contato-icon"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4.5 3.5h3l1.2 3-1.7 1.3a10.5 10.5 0 0 0 4.7 4.7l1.3-1.7 3 1.2v3c0 .6-.5 1.1-1.1 1A13.4 13.4 0 0 1 3.5 4.6c-.1-.6.4-1.1 1-1.1Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="none"/></svg></span>
+                <span class="contato-row-text"><span class="contato-row-label">Fone/WhatsApp</span><span class="contato-row-value">(21) 98081-8818</span></span>
+              </a>
+              <a href="mailto:contato@gruponora.com.br" class="contato-row">
+                <span class="contato-icon"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2.6" y="4.2" width="14.8" height="11.6" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="m3.4 5.6 6.6 4.7 6.6-4.7" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span>
+                <span class="contato-row-text"><span class="contato-row-label">E-mail</span><span class="contato-row-value">contato@gruponora.com.br</span></span>
+              </a>
+              <div class="contato-row">
+                <span class="contato-icon"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 17.5s5.5-5 5.5-9a5.5 5.5 0 1 0-11 0c0 4 5.5 9 5.5 9Z" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span>
+                <span class="contato-row-text"><span class="contato-row-label">Endereço</span><span class="contato-row-value">Rua Teste Exemplo, 123<br>Rio de Janeiro/RJ<br>CEP 12345-678</span></span>
+              </div>
+            </div>
+          </div>
+          <div class="contato-social">
+            <a href="#" class="social-icon" aria-label="Instagram"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3.2" y="3.2" width="13.6" height="13.6" rx="4" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="10" cy="10" r="3.4" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="14.1" cy="5.9" r="1" fill="currentColor"/></svg></a>
+            <a href="#" class="social-icon" aria-label="Facebook"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12.6 6.6h-1.4c-.6 0-1 .4-1 1v1.7h2.3l-.4 2.4h-1.9v5.1H7.7v-5.1H6V9.3h1.7V7.5c0-1.9 1.1-3.2 3-3.2h1.9v2.3Z" fill="currentColor"/></svg></a>
+            <a href="#" class="social-icon" aria-label="LinkedIn"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3.4" y="3.4" width="13.2" height="13.2" rx="2.4" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M6.9 8.6v5m0-7.1v.1M9.7 13.6V10a1.6 1.6 0 0 1 3.2 0v3.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg></a>
+          </div>
+        </div>
+        <form id="contact-form" class="contato-form reveal" data-from="up" data-delay="120" novalidate>
+          <div class="form-field">
+            <label for="f-nome">Nome *</label>
+            <input id="f-nome" name="nome" type="text" placeholder="Seu nome" required>
+          </div>
+          <div class="form-field">
+            <label for="f-email">E-mail *</label>
+            <input id="f-email" name="email" type="email" placeholder="voce@email.com" required>
+          </div>
+          <div class="form-field">
+            <label for="f-tel">Telefone ou WhatsApp *</label>
+            <input id="f-tel" name="telefone" type="tel" placeholder="(00) 00000-0000" required>
+          </div>
+          <div class="form-field">
+            <label for="f-msg">Como podemos ajudar? *</label>
+            <textarea id="f-msg" name="mensagem" rows="4" placeholder="Conte pra gente" required></textarea>
+          </div>
+          <button type="submit" id="form-submit" class="btn-accent form-submit">
+            <span class="spinner" hidden></span>
+            <span class="form-submit-label">Enviar</span>
+          </button>
+          <p id="form-error" class="form-msg form-msg--error" hidden>Campo obrigatório.</p>
+          <p id="form-success" class="form-msg form-msg--success" hidden><span class="check">✓</span>Mensagem enviada. <span class="form-msg-note">· microcopy provisória</span></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-cols">
+      <div class="footer-brand">
+        <img src="assets/nora-safe-horizontal.png" alt="Nora Safe">
+        <p>Corretora de seguros com foco total nas necessidades da área médica.</p>
+        <a href="#contato" class="btn-primary">Fale Conosco <span class="arrow">→</span></a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Serviços</div>
+        <a href="#servicos">Soluções Centralizadas</a>
+        <a href="#servicos">Gerente Exclusivo</a>
+        <a href="#servicos">Blindagem Médica</a>
+        <a href="#servicos">Renda Protegida</a>
+        <a href="#servicos">Planos de Saúde</a>
+        <a href="#servicos">Soluções Completas</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Institucional</div>
+        <a href="http://localhost:3004/">News</a>
+        <a href="#sobre">Sobre nós</a>
+        <a href="#faq">FAQ</a>
+        <a href="http://localhost:3000/">Grupo Nora <span class="arrow-mini">↗</span></a>
+        <a href="#contato">Fale Conosco</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Legal</div>
+        <a href="#top">Política de privacidade</a>
+        <a href="#contato">Fale Conosco</a>
+      </div>
+    </div>
+    <div class="footer-brands">
+      <span class="footer-brands-label">Ecossistema Grupo Nora</span>
+      <a href="http://localhost:3001/" class="brand-chip" style="--chip-color:#92E0CD"><span class="brand-dot"></span>Nora Care</a>
+      <a href="http://localhost:3002/" class="brand-chip" style="--chip-color:#BC9466"><span class="brand-dot"></span>Nora Capital</a>
+      <a href="#top" class="brand-chip" aria-current="page" style="--chip-color:#9FA7BB"><span class="brand-dot"></span>Nora Safe</a>
+      <a href="http://localhost:3005/" class="brand-chip" style="--chip-color:#EF8F53"><span class="brand-dot"></span>Nora Educação</a>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">2026 Grupo Nora. All Rights Reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="#servicos">Serviços</a><span class="dot"></span>
+        <a href="http://localhost:3004/">Blog</a><span class="dot"></span>
+        <a href="#top">Voltar ao topo ↑</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

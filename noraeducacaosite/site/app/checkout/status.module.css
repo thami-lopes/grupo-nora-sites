@@ -1,0 +1,92 @@
+.main {
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+.section {
+  padding: 148px 16px 100px;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  font-size: 32px;
+}
+
+.iconSuccess {
+  background: rgba(146, 224, 205, 0.3);
+}
+
+.iconError {
+  background: rgba(240, 120, 120, 0.18);
+}
+
+.iconPending {
+  background: var(--edu-soft);
+}
+
+.title {
+  font: 700 30px/1.2 var(--font-poppins);
+  color: var(--navy);
+  margin: 0 0 12px;
+}
+
+.text {
+  font: 400 16px/1.6 var(--font-poppins);
+  color: rgba(13, 26, 72, 0.62);
+  margin: 0 0 8px;
+}
+
+.ref {
+  font: 500 13px/1.4 var(--font-poppins);
+  color: rgba(13, 26, 72, 0.4);
+  margin: 0 0 32px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--navy);
+  color: #fff;
+  height: 50px;
+  padding: 0 24px;
+  border-radius: 13px;
+  font: 500 15px/1 var(--font-poppins);
+  text-decoration: none;
+  transition: background 200ms;
+}
+
+.primaryBtn:hover {
+  background: var(--edu);
+}
+
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--navy);
+  border: 1px solid rgba(13, 26, 72, 0.2);
+  height: 50px;
+  padding: 0 24px;
+  border-radius: 13px;
+  font: 500 15px/1 var(--font-poppins);
+  text-decoration: none;
+}

@@ -1,0 +1,167 @@
+.section {
+  padding: 32px 16px;
+  background: var(--bg);
+}
+
+@media (min-width: 640px) {
+  .section {
+    padding: 40px 24px;
+  }
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid rgba(13, 26, 72, 0.08);
+  border-radius: 24px;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 44px 20px;
+}
+
+@media (min-width: 640px) {
+  .card {
+    border-radius: 32px;
+    padding: 64px 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    padding: 72px 0;
+  }
+}
+
+.grid {
+  position: relative;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 8px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    padding: 0 60px;
+    grid-template-columns: 6fr 5fr;
+    gap: 64px;
+  }
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid rgba(13, 26, 72, 0.12);
+  border-radius: 20px;
+  padding: 8px 15px;
+  margin-bottom: 18px;
+  font: 600 11.5px/1 var(--font-poppins);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+
+.title {
+  font: 600 clamp(28px, 3.8vw, 44px) / 1.1 var(--font-poppins);
+  letter-spacing: -0.022em;
+  color: var(--navy);
+  margin: 0 0 18px;
+  max-width: 16ch;
+}
+
+.lead {
+  font: 400 16.5px/1.7 var(--font-poppins);
+  color: rgba(13, 26, 72, 0.66);
+  margin: 0;
+  max-width: 56ch;
+}
+
+.lead strong {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.badges {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.badgeCard {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: var(--bg);
+  border: 1px solid rgba(13, 26, 72, 0.08);
+  border-radius: 18px;
+  padding: 20px 22px;
+}
+
+.hsiLogoSlot {
+  flex: none;
+  width: 128px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid rgba(13, 26, 72, 0.08);
+}
+
+.hsiLogoImg {
+  max-width: 110px;
+  max-height: 40px;
+  width: auto;
+  height: auto;
+  display: block;
+}
+
+.hsiLogoFallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  font: 800 18px/1 var(--font-poppins);
+  color: #203aba;
+  text-align: center;
+}
+
+.hsiLogoFallback span {
+  font: 600 7px/1.2 var(--font-poppins);
+  letter-spacing: 0.02em;
+  color: rgba(13, 26, 72, 0.55);
+  max-width: 88px;
+}
+
+.noraLogoSlot {
+  flex: none;
+  width: 128px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid rgba(13, 26, 72, 0.08);
+}
+
+.noraLogoImg {
+  max-width: 82px;
+  max-height: 32px;
+  width: auto;
+  height: auto;
+  display: block;
+}
+
+.badgeText {
+  font: 400 14.5px/1.55 var(--font-poppins);
+  color: rgba(13, 26, 72, 0.62);
+  margin: 0;
+}

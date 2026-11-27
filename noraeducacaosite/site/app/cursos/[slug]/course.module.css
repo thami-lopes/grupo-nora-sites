@@ -1,0 +1,317 @@
+.main {
+  background: var(--bg);
+  min-height: 100vh;
+  padding: 140px 16px 80px;
+}
+
+@media (min-width: 640px) {
+  .main {
+    padding: 148px 24px 100px;
+  }
+}
+
+.heroCard,
+.tabsCard {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid rgba(13, 26, 72, 0.08);
+  border-radius: 24px;
+  padding: 32px 24px;
+}
+
+@media (min-width: 640px) {
+  .heroCard,
+  .tabsCard {
+    padding: 44px 44px;
+  }
+}
+
+.heroCard {
+  margin-bottom: 18px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 20px;
+  padding: 6px 13px;
+  font: 600 11px/1 var(--font-poppins);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.badgeHsi {
+  background: rgba(32, 58, 186, 0.1);
+  color: #203aba;
+}
+
+.badgeNora {
+  background: var(--edu-soft);
+  color: var(--edu-dark);
+}
+
+.name {
+  font: 700 clamp(32px, 5vw, 48px) / 1.05 var(--font-poppins);
+  letter-spacing: -0.03em;
+  color: var(--navy);
+  margin: 0 0 6px;
+}
+
+.fullName {
+  font: 500 16px/1.4 var(--font-poppins);
+  color: rgba(13, 26, 72, 0.55);
+  margin: 0 0 18px;
+}
+
+.summary {
+  font: 400 16px/1.65 var(--font-poppins);
+  color: rgba(13, 26, 72, 0.7);
+  margin: 0 0 20px;
+  max-width: 62ch;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font: 500 13px/1 var(--font-poppins);
+  color: rgba(13, 26, 72, 0.5);
+  margin-bottom: 26px;
+}
+
+.metaDot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(13, 26, 72, 0.3);
+  flex: none;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+@media (min-width: 480px) {
+  .actions {
+    flex-direction: row;
+    align-items: center;
+    gap: 22px;
+  }
+}
+
+.buy {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--navy);
+  color: #fff;
+  height: 50px;
+  padding: 0 24px;
+  border-radius: 13px;
+  font: 600 15px/1 var(--font-poppins);
+  text-decoration: none;
+  transition:
+    background 200ms,
+    color 200ms;
+  white-space: nowrap;
+}
+
+.buy:hover {
+  background: var(--edu);
+}
+
+.trainingLink {
+  font: 500 13.5px/1.4 var(--font-poppins);
+  color: var(--edu-dark);
+  text-decoration: underline;
+}
+
+.trainingLink:hover {
+  color: var(--navy);
+}
+
+.tabBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  border-bottom: 1px solid rgba(13, 26, 72, 0.1);
+  margin-bottom: 24px;
+  padding-bottom: 4px;
+}
+
+.tabBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px 14px;
+  border-radius: 10px 10px 0 0;
+  font: 600 13.5px/1 var(--font-poppins);
+  color: rgba(13, 26, 72, 0.5);
+  transition:
+    color 200ms,
+    background 200ms;
+  position: relative;
+}
+
+.tabBtn:hover {
+  color: var(--navy);
+  background: rgba(13, 26, 72, 0.04);
+}
+
+.tabBtnActive {
+  color: var(--navy);
+  background: var(--edu-soft);
+}
+
+.tabBtnActive::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: -5px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--edu);
+}
+
+.tabPanel {
+  min-height: 140px;
+}
+
+.overviewText {
+  font: 400 16px/1.75 var(--font-poppins);
+  color: rgba(13, 26, 72, 0.72);
+  margin: 0;
+  max-width: 68ch;
+}
+
+.programList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.programList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font: 400 15.5px/1.5 var(--font-poppins);
+  color: rgba(13, 26, 72, 0.75);
+}
+
+.check {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--edu-soft);
+  color: var(--edu-dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 1px;
+}
+
+.prereqBox {
+  margin-top: 22px;
+  background: var(--bg);
+  border: 1px solid rgba(13, 26, 72, 0.08);
+  border-radius: 14px;
+  padding: 18px 20px;
+}
+
+.prereqLabel {
+  display: block;
+  font: 600 11px/1 var(--font-poppins);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--edu-dark);
+  margin-bottom: 8px;
+}
+
+.prereqBox p {
+  margin: 0;
+  font: 400 14.5px/1.6 var(--font-poppins);
+  color: rgba(13, 26, 72, 0.68);
+}
+
+.buyDisabled {
+  display: inline-flex;
+  align-items: center;
+  height: 50px;
+  padding: 0 24px;
+  border-radius: 13px;
+  border: 1px dashed rgba(13, 26, 72, 0.3);
+  color: rgba(13, 26, 72, 0.6);
+  font: 600 15px/1 var(--font-poppins);
+  white-space: nowrap;
+  cursor: default;
+}
+
+.nextClass {
+  display: inline-block;
+  margin: -8px 0 22px;
+  padding: 9px 14px;
+  border-radius: 11px;
+  background: var(--edu-soft);
+  font: 500 13.5px/1.3 var(--font-poppins);
+  color: var(--edu-dark);
+}
+
+.nextClass strong {
+  font-weight: 700;
+}
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  counter-reset: step;
+}
+
+.steps li {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  column-gap: 14px;
+  align-items: start;
+  counter-increment: step;
+}
+
+.steps li::before {
+  content: counter(step);
+  grid-row: span 2;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--edu);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 700 14px/1 var(--font-poppins);
+}
+
+.stepTitle {
+  font: 700 15.5px/1.3 var(--font-poppins);
+  color: var(--navy);
+}
+
+.stepText {
+  margin: 3px 0 0;
+  font: 400 14.5px/1.6 var(--font-poppins);
+  color: rgba(13, 26, 72, 0.66);
+}

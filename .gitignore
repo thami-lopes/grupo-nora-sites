@@ -1,0 +1,25 @@
+# dependências e builds (cada site gera os seus com npm install / npm run build)
+node_modules/
+.next/
+dist/
+out/
+
+# segredos e configurações locais — nunca versionar
+.env
+.env.*
+!.env.local.example
+.vercel/
+
+# arquivos de trabalho que não fazem parte dos sites
+.claude/
+_publicacao/
+*.zip
+*.log
+.DS_Store
+Thumbs.db
+next-env.d.ts
+
+# outros projetos que estão na mesma pasta de trabalho
+lp-guia-primeiro-plantao/
+nora-intelligence/
+certificado-nora-educacao.html

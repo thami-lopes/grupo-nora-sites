@@ -1,0 +1,81 @@
+:root {
+  --navy: #0d1a48;
+  --navy-deep: #0a1338;
+  --navy-mid: #101c4e;
+  --edu: #ef8f53;
+  --edu-dark: #c96a30;
+  --edu-soft: #fdece0;
+  --amber: #e6a963;
+  --bg: #f6f7f4;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--navy);
+  font-family: var(--font-poppins), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+::selection {
+  background: rgba(239, 143, 83, 0.32);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@keyframes gnSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes gnMarqueeL {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes gnMarqueeR {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,499 @@
+/* ==========================================================================
+   Nora Capital — Home
+   Design tokens (Grupo Nora Brandbook, Nora Capital sub-brand accent)
+   ========================================================================== */
+:root{
+  --navy: #0D1A48;
+  --navy-2: #0A1338;
+  --navy-3: #101C4E;
+  --bronze: #BC9466;
+  --bronze-dark: #7A5730;
+  --bg: #F6F7F4;
+  --white: #FFFFFF;
+  --ease: cubic-bezier(.22,1,.36,1);
+  --container: 1320px;
+}
+
+*, *::before, *::after{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+html,body{ margin:0; padding:0; }
+body{
+  background:var(--bg);
+  color:var(--navy);
+  font-family:'Poppins', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+a{ color:inherit; text-decoration:none; }
+button{ font-family:inherit; }
+img{ max-width:100%; display:block; }
+::selection{ background:rgba(188,148,102,.34); }
+.container{ max-width:var(--container); margin:0 auto; padding:0 60px; }
+
+@keyframes gnSpin{ to{ transform:rotate(360deg); } }
+
+/* Reduced motion: kill all transitions/animations at the root */
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{
+    animation-duration:.001ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;
+    scroll-behavior:auto !important;
+  }
+}
+
+/* Scroll reveal (JS toggles .is-visible) */
+[data-reveal]{
+  opacity:0;
+  transform:translate3d(0,34px,0);
+  filter:blur(7px);
+  transition:opacity 760ms var(--ease), transform 860ms cubic-bezier(.19,1,.28,1), filter 700ms var(--ease);
+  will-change:transform,opacity,filter;
+}
+[data-reveal="left"]{ transform:translate3d(-34px,0,0); }
+[data-reveal="right"]{ transform:translate3d(34px,0,0); }
+[data-reveal="scale"]{ transform:scale(.955); }
+[data-reveal].is-visible{ opacity:1; transform:none; filter:none; will-change:auto; }
+
+/* ==========================================================================
+   Scroll progress bar
+   ========================================================================== */
+.progress-bar{ position:fixed; top:0; left:0; right:0; height:3px; z-index:70; pointer-events:none; }
+.progress-bar__fill{ height:100%; width:0%; background:linear-gradient(90deg,var(--navy) 0%,var(--bronze) 100%); border-radius:0 3px 3px 0; }
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+.site-header{
+  position:fixed; top:20px; left:50%; transform:translateX(-50%);
+  z-index:60; width:1120px; max-width:calc(100% - 32px); height:68px;
+  background:transparent; border:1px solid transparent; border-radius:18px; box-shadow:none;
+  transition:background 260ms var(--ease), border-color 260ms, box-shadow 260ms, height 260ms;
+}
+.site-header.is-scrolled{
+  height:62px; background:#fff; border-color:rgba(13,26,72,.08);
+  box-shadow:0 14px 34px -18px rgba(13,26,72,.4);
+}
+.site-header__inner{ height:100%; padding:0 14px 0 24px; display:flex; align-items:center; justify-content:space-between; gap:22px; }
+.site-header__logo{ height:23px; width:auto; transition:height 260ms var(--ease); flex:none; }
+.site-header.is-scrolled .site-header__logo{ height:21px; }
+.site-header__nav{ display:flex; align-items:center; gap:26px; }
+.site-header__nav a{ font:500 15px/1 'Poppins'; color:var(--navy); transition:color 200ms; white-space:nowrap; }
+.site-header__nav a:hover, .site-header__nav a:focus-visible{ color:var(--bronze); }
+.site-header__actions{ display:flex; align-items:center; gap:12px; }
+.site-header__group-link{
+  display:inline-flex; align-items:center; gap:8px; height:40px; padding:0 14px; border-radius:11px;
+  border:1px solid rgba(13,26,72,.16); background:rgba(255,255,255,.6);
+  font:500 13px/1 'Poppins'; color:rgba(13,26,72,.72); transition:background 200ms, border-color 200ms, color 200ms;
+  white-space:nowrap;
+}
+.site-header__group-link:hover{ background:rgba(188,148,102,.22); border-color:var(--bronze); color:var(--navy); }
+.site-header__divider{ width:1px; height:22px; background:rgba(13,26,72,.14); flex:none; }
+.site-header__cta{
+  display:inline-flex; align-items:center; gap:7px; background:var(--navy); color:#fff;
+  height:40px; padding:0 17px; border-radius:11px; font:500 13.5px/1 'Poppins';
+  transition:background 260ms var(--ease), color 260ms var(--ease), height 260ms;
+  white-space:nowrap;
+}
+.site-header.is-scrolled .site-header__cta{ height:40px; }
+.site-header:not(.is-scrolled) .site-header__cta{ height:44px; }
+.site-header__cta:hover{ background:var(--bronze); color:var(--navy); }
+.site-header__burger{
+  display:none; width:44px; height:44px; border-radius:12px; border:1px solid var(--navy); background:#fff;
+  flex-direction:column; gap:4px; align-items:center; justify-content:center; cursor:pointer; flex:none;
+}
+.site-header__burger span{ width:17px; height:2px; background:var(--navy); border-radius:2px; }
+
+/* Mobile drawer */
+.mobile-drawer{
+  position:fixed; inset:0; z-index:80; background:rgba(13,26,72,.5);
+  opacity:0; pointer-events:none; transition:opacity 280ms var(--ease);
+}
+.mobile-drawer.is-open{ opacity:1; pointer-events:auto; }
+.mobile-drawer__panel{
+  position:absolute; top:0; right:0; height:100%; width:min(340px,86vw); background:#fff;
+  padding:26px 26px 34px; display:flex; flex-direction:column; gap:6px;
+  transform:translateX(100%); transition:transform 320ms var(--ease);
+  box-shadow:-24px 0 60px -30px rgba(13,26,72,.4);
+}
+.mobile-drawer.is-open .mobile-drawer__panel{ transform:translateX(0); }
+.mobile-drawer__top{ display:flex; align-items:center; justify-content:space-between; margin-bottom:18px; }
+.mobile-drawer__close{
+  width:40px; height:40px; border-radius:11px; border:1px solid rgba(13,26,72,.16); background:#fff; cursor:pointer;
+  display:flex; align-items:center; justify-content:center; font-size:18px; color:var(--navy);
+}
+.mobile-drawer__nav{ display:flex; flex-direction:column; }
+.mobile-drawer__nav a{ font:500 18px/1 'Poppins'; color:var(--navy); padding:16px 4px; border-bottom:1px solid rgba(13,26,72,.08); }
+.mobile-drawer__group{
+  display:inline-flex; align-items:center; gap:8px; margin-top:18px; padding:12px 16px; border-radius:11px;
+  border:1px solid rgba(13,26,72,.16); font:500 14px/1 'Poppins'; color:rgba(13,26,72,.72); width:fit-content;
+}
+.mobile-drawer__cta{
+  margin-top:auto; display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  background:var(--navy); color:#fff; height:52px; border-radius:13px; font:500 15px/1 'Poppins';
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+.hero-section{ background:var(--bg); padding:104px 24px 56px; }
+.hero-frame{
+  position:relative; overflow:hidden; border-radius:32px; min-height:560px;
+  display:flex; align-items:center;
+}
+.hero-frame__video, .hero-frame__poster{
+  position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:74% 50%;
+  filter:saturate(.86) contrast(1.02) brightness(1.06);
+}
+.hero-frame__overlay{ position:absolute; inset:0; background:var(--bronze); opacity:.85; pointer-events:none; }
+.hero-frame__mark{
+  position:absolute; right:-30px; bottom:-6px; width:52%; height:auto; max-width:520px;
+  opacity:.07; pointer-events:none;
+}
+.hero-frame__content{ position:relative; width:100%; max-width:900px; padding:56px 60px; }
+.hero-badge{
+  display:inline-flex; align-items:center; gap:9px; background:#fff; border:1px solid var(--navy);
+  border-radius:20px; padding:8px 15px; margin-bottom:28px; font:600 11.5px/1 'Poppins'; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--navy);
+}
+.hero-badge__dot{ width:7px; height:7px; border-radius:50%; background:var(--navy); }
+.hero-title{ font:600 clamp(34px,5.2vw,78px)/1.02 'Poppins'; letter-spacing:-.034em; color:var(--navy); margin:0 0 22px; text-wrap:balance; }
+.hero-sub{ font:400 clamp(15px,1.8vw,19px)/1.6 'Poppins'; color:var(--navy); margin:0 0 34px; max-width:52ch; }
+.hero-actions{ display:flex; align-items:center; gap:14px; margin-bottom:32px; flex-wrap:wrap; }
+.btn{ font-family:'Poppins'; cursor:pointer; border-radius:13px; font-weight:500; display:inline-flex; align-items:center; gap:11px; transition:background 200ms, color 200ms, border-color 200ms; }
+.btn-primary{ background:var(--navy); color:#fff; border:none; height:54px; padding:0 28px; font-size:16px; }
+.btn-primary:hover{ background:#fff; color:var(--navy); }
+.btn-primary:focus-visible{ outline:2px solid var(--bronze); outline-offset:3px; }
+.btn-outline{ background:transparent; color:var(--navy); border:1px solid var(--navy); height:54px; padding:0 24px; font-size:16px; }
+.btn-outline:hover{ background:#fff; }
+.hero-chips{ display:flex; align-items:center; gap:18px; color:var(--navy); font:500 14px/1 'Poppins'; flex-wrap:wrap; }
+.hero-chips .dot{ width:4px; height:4px; border-radius:50%; background:var(--navy); }
+.hero-frame__play{
+  position:absolute; right:24px; bottom:24px; display:inline-flex; align-items:center; gap:10px; height:48px;
+  padding:0 18px; border-radius:24px; background:var(--navy); border:1px solid var(--navy); color:#fff; cursor:pointer;
+  font:500 13px/1 'Poppins'; backdrop-filter:blur(6px); transition:background 200ms; z-index:2;
+}
+.hero-frame__play:hover{ background:rgba(13,26,72,.62); }
+.hero-frame__play:focus-visible{ outline:2px solid var(--bronze); outline-offset:3px; }
+.hero-frame__play .bars{ display:flex; gap:3px; }
+.hero-frame__play .bars span{ width:3px; height:13px; background:#fff; border-radius:1px; }
+.hero-frame__play .tri{ width:0; height:0; border-left:12px solid #fff; border-top:7px solid transparent; border-bottom:7px solid transparent; margin-left:2px; }
+
+/* ==========================================================================
+   Section header (badge / title patterns reused)
+   ========================================================================== */
+.badge{
+  display:inline-flex; align-items:center; background:#fff; border:1px solid rgba(13,26,72,.12);
+  border-radius:20px; padding:8px 15px; font:600 11.5px/1 'Poppins'; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--navy);
+}
+.badge--on-dark{ background:rgba(188,148,102,.14); border-color:rgba(188,148,102,.5); color:var(--bronze); }
+
+/* ==========================================================================
+   Sobre nós (Quem somos)
+   ========================================================================== */
+.about-section{ background:var(--bg); padding:56px 24px; }
+.about-card{
+  position:relative; overflow:hidden; border-radius:32px; max-width:1320px; margin:0 auto; padding:96px 60px;
+  background:
+    radial-gradient(80% 88% at -8% 112%, rgba(188,148,102,.5) 0%, rgba(188,148,102,.3) 24%, rgba(188,148,102,.14) 46%, rgba(188,148,102,.04) 66%, rgba(188,148,102,0) 80%),
+    radial-gradient(54% 62% at 104% -8%, rgba(188,148,102,.13) 0%, rgba(188,148,102,.04) 44%, rgba(188,148,102,0) 72%),
+    linear-gradient(152deg,var(--navy-2) 0%, var(--navy) 48%, var(--navy-3) 100%);
+}
+.about-grid{ max-width:1200px; margin:0 auto; display:grid; grid-template-columns:5.4fr 6fr; gap:80px; align-items:start; }
+.about-lead-kicker{ font:400 26px/1.3 'Poppins'; letter-spacing:-.01em; color:rgba(255,255,255,.72); margin:0 0 6px; }
+.about-title{ font:600 clamp(40px,6vw,84px)/.94 'Poppins'; letter-spacing:-.042em; color:#fff; margin:14px 0 34px; }
+.about-part-of{
+  display:inline-flex; align-items:stretch; gap:20px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.2);
+  border-radius:16px; padding:18px 22px; margin-bottom:34px;
+}
+.about-part-of__label{ display:flex; flex-direction:column; justify-content:center; gap:5px; }
+.about-part-of__label span:first-child{ font:600 10.5px/1 'Poppins'; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,.55); }
+.about-part-of__label span:last-child{ font:600 22px/1 'Poppins'; letter-spacing:-.02em; color:var(--bronze); }
+.about-part-of__divider{ width:1px; background:rgba(255,255,255,.22); }
+.about-part-of__text{ align-self:center; font:400 13.5px/1.5 'Poppins'; color:rgba(255,255,255,.72); max-width:17ch; }
+.about-right{ padding-top:57px; }
+.about-lead{ font:400 26px/1.42 'Poppins'; letter-spacing:-.014em; color:#fff; margin:0 0 40px; }
+.about-lead strong{ font-weight:600; }
+.about-columns{ display:grid; grid-template-columns:1fr 1fr; gap:44px; }
+.about-columns > div{ border-top:2px solid var(--bronze); padding-top:20px; }
+.about-columns > div:last-child{ border-top-color:rgba(188,148,102,.4); }
+.about-columns p{ font:400 16.5px/1.7 'Poppins'; color:rgba(255,255,255,.86); margin:0; }
+
+/* ==========================================================================
+   Serviços
+   ========================================================================== */
+.services-section{ padding:56px 0; background:var(--bg); }
+.services-head{ display:grid; grid-template-columns:1fr 404px; gap:72px; align-items:end; margin-bottom:46px; }
+.services-head h2{ font:600 clamp(30px,4.4vw,52px)/1.06 'Poppins'; letter-spacing:-.028em; color:var(--navy); margin:18px 0 18px; max-width:724px; text-wrap:balance; }
+.services-head__eyebrow{ font:600 11.5px/1 'Poppins'; letter-spacing:.18em; text-transform:uppercase; color:rgba(13,26,72,.5); }
+.services-head__right{ display:flex; flex-direction:column; align-items:flex-start; gap:24px; }
+.services-head__right p{ font:400 17.5px/1.68 'Poppins'; color:var(--navy); margin:0; }
+.services-cta{
+  display:inline-flex; align-items:center; gap:9px; background:var(--navy); color:#fff; height:48px; padding:0 24px;
+  border-radius:12px; font:500 14.5px/1 'Poppins'; transition:background 220ms, color 220ms;
+}
+.services-cta:hover{ background:var(--bronze); color:var(--navy); }
+.services-cta:hover .services-cta__arrow{ transform:translateX(4px); }
+.services-cta__arrow{ font-size:15px; transition:transform 320ms var(--ease); display:inline-block; }
+
+.services-grid{ display:grid; grid-template-columns:repeat(6,1fr); gap:18px; align-items:stretch; }
+.service-card{ grid-column:span 2; }
+.service-card--wide{ grid-column:span 3; }
+.service-card__inner{
+  position:relative; height:100%; overflow:hidden; display:flex; flex-direction:column; background:#fff;
+  border:1px solid rgba(13,26,72,.09); border-radius:22px; padding:28px 30px 30px;
+  box-shadow:0 12px 28px -24px rgba(13,26,72,.2);
+  transition:transform 420ms var(--ease), border-color 320ms, box-shadow 420ms;
+}
+.service-card:hover .service-card__inner{ transform:translateY(-8px); border-color:var(--bronze); box-shadow:0 30px 56px -34px rgba(13,26,72,.36); }
+.service-card__bar{ position:absolute; left:0; top:0; height:3px; width:0%; background:var(--bronze); transition:width 480ms var(--ease); }
+.service-card:hover .service-card__bar{ width:100%; }
+.service-card__top{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:24px; }
+.service-card__num{ font:700 12.5px/1 'Poppins'; letter-spacing:.1em; color:rgba(13,26,72,.34); transition:color 320ms; }
+.service-card:hover .service-card__num{ color:var(--navy); }
+.service-card__dot{ width:9px; height:9px; border-radius:50%; background:rgba(188,148,102,.55); transition:transform 420ms var(--ease), background-color 320ms; }
+.service-card:hover .service-card__dot{ transform:scale(2.4); background:var(--bronze); }
+.service-card h3{ font:600 23px/1.24 'Poppins'; letter-spacing:-.018em; color:var(--navy); margin:0 0 12px; }
+.service-card p{ font:400 15.5px/1.62 'Poppins'; color:rgba(13,26,72,.66); margin:0 0 22px; }
+.service-card__cta{
+  margin-top:auto; display:flex; align-items:center; gap:8px; font:500 13.5px/1 'Poppins'; color:var(--navy);
+  opacity:0; transform:translateX(-6px); transition:opacity 320ms, transform 420ms var(--ease);
+}
+.service-card:hover .service-card__cta{ opacity:1; transform:translateX(0); }
+
+/* ==========================================================================
+   BPO
+   ========================================================================== */
+.bpo-section{ background:var(--bg); padding:56px 24px; }
+.bpo-head{ display:grid; grid-template-columns:1.15fr 1fr; gap:72px; align-items:end; max-width:1200px; margin:0 auto 40px; }
+.bpo-head h2{ font:600 clamp(28px,4.4vw,52px)/1.06 'Poppins'; letter-spacing:-.028em; color:var(--navy); margin:20px 0 0; text-wrap:balance; }
+.bpo-head p{ font:400 17.5px/1.7 'Poppins'; color:var(--navy); margin:0 0 26px; }
+.bpo-head p strong{ font-weight:600; }
+.bpo-panel{ position:relative; overflow:hidden; border-radius:32px; background:var(--navy); max-width:var(--container); margin:0 auto; padding:58px 48px 62px; }
+.bpo-panel__top{ display:flex; align-items:baseline; justify-content:space-between; gap:24px; margin-bottom:26px; }
+.bpo-panel__eyebrow{ font:600 11px/1 'Poppins'; letter-spacing:.18em; text-transform:uppercase; color:var(--bronze); }
+.bpo-panel__count{ font:600 11px/1 'Poppins'; letter-spacing:.14em; color:rgba(255,255,255,.45); }
+.bpo-body{ display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; }
+.bpo-list{ display:flex; flex-direction:column; }
+.bpo-item{
+  display:grid; grid-template-columns:34px 1fr 18px; align-items:center; gap:14px; width:100%;
+  background:transparent; border:none; border-top:2px solid rgba(255,255,255,.16); padding:17px 0; cursor:pointer;
+  text-align:left; font-family:'Poppins'; transition:border-color 260ms;
+}
+.bpo-item:last-child{ border-bottom:2px solid rgba(255,255,255,.16); }
+.bpo-item.is-active{ border-top-color:var(--bronze); }
+.bpo-item__n{ font:700 11.5px/1 'Poppins'; letter-spacing:.08em; color:rgba(255,255,255,.34); transition:color 260ms; }
+.bpo-item.is-active .bpo-item__n{ color:var(--bronze); }
+.bpo-item__name{ font:500 18px/1.3 'Poppins'; letter-spacing:-.014em; color:rgba(255,255,255,.6); transition:color 260ms; }
+.bpo-item.is-active .bpo-item__name{ font-weight:600; color:#fff; }
+.bpo-item__arrow{ font:400 15px/1 'Poppins'; color:var(--bronze); opacity:0; transition:opacity 260ms; }
+.bpo-item.is-active .bpo-item__arrow{ opacity:1; }
+.bpo-detail h3{ font:600 30px/1.16 'Poppins'; letter-spacing:-.024em; color:#fff; margin:0 0 16px; }
+.bpo-detail p{ font:400 17.5px/1.72 'Poppins'; color:rgba(255,255,255,.8); margin:0 0 30px; min-height:96px; }
+.bpo-track{ height:2px; border-radius:2px; background:rgba(255,255,255,.16); overflow:hidden; }
+.bpo-track__fill{ display:block; height:100%; width:0%; background:var(--bronze); }
+
+/* ==========================================================================
+   FAQ
+   ========================================================================== */
+.faq-section{ padding:56px 24px; background:var(--bg); }
+.faq-card{
+  position:relative; overflow:hidden; background:#fff; border:1px solid rgba(13,26,72,.08); border-radius:32px;
+  padding:96px 48px; max-width:1320px; margin:0 auto;
+}
+.faq-card__glow{
+  position:absolute; top:-110px; right:-90px; width:340px; height:340px; border-radius:50%;
+  background:radial-gradient(circle, rgba(188,148,102,.3) 0%, rgba(188,148,102,.1) 44%, rgba(188,148,102,0) 74%);
+  filter:blur(6px); pointer-events:none;
+}
+.faq-card__top-line{ position:absolute; left:0; right:0; top:0; height:3px; background:linear-gradient(90deg,var(--bronze) 0%, rgba(188,148,102,.35) 38%, rgba(188,148,102,0) 78%); pointer-events:none; }
+.faq-grid{ position:relative; max-width:1200px; margin:0 auto; display:grid; grid-template-columns:4fr 7fr; gap:72px; align-items:start; }
+.faq-head h2{ font:600 clamp(28px,4vw,46px)/1.06 'Poppins'; letter-spacing:-.022em; color:var(--navy); margin:18px 0 18px; max-width:12ch; }
+.faq-head p{ font:400 17px/1.66 'Poppins'; color:rgba(13,26,72,.6); margin:0 0 28px; max-width:38ch; }
+.faq-cta{ display:inline-flex; align-items:center; gap:8px; background:var(--navy); color:#fff; height:44px; padding:0 20px; border-radius:12px; font:500 14px/1 'Poppins'; transition:background 200ms, color 200ms; }
+.faq-cta:hover{ background:var(--bronze); color:var(--navy); }
+.faq-list{ border-top:1px solid rgba(13,26,72,.1); }
+.faq-item{ border-bottom:1px solid rgba(13,26,72,.1); padding:0 18px; margin:0 -18px; border-radius:14px; transition:background 320ms var(--ease); background:transparent; }
+.faq-item__btn{ width:100%; display:grid; grid-template-columns:38px 1fr 32px; align-items:start; gap:20px; background:transparent; border:none; padding:26px 0; cursor:pointer; text-align:left; }
+.faq-item__num{ font:600 12.5px/1.9 'Poppins'; letter-spacing:.1em; color:rgba(13,26,72,.3); transition:color 260ms, font-weight 260ms; }
+.faq-item__q{ font:500 19px/1.4 'Poppins'; letter-spacing:-.012em; color:rgba(13,26,72,.78); transition:color 260ms, font-weight 260ms; }
+.faq-item__icon{
+  flex:none; width:32px; height:32px; border-radius:50%; border:1px solid rgba(13,26,72,.14); background:transparent;
+  display:flex; align-items:center; justify-content:center; font:500 17px/1 'Poppins'; color:var(--navy);
+  transition:background 300ms, border-color 300ms, transform 380ms var(--ease);
+}
+.faq-item__panel{ overflow:hidden; height:0; transition:height 420ms var(--ease); }
+.faq-item__panel p{ font:400 16px/1.72 'Poppins'; color:rgba(13,26,72,.64); margin:0 0 28px; max-width:88ch; }
+.faq-item__panel strong{ font-weight:600; color:var(--navy); }
+.faq-item.is-open{ background:linear-gradient(90deg, rgba(188,148,102,.2) 0%, rgba(188,148,102,.05) 52%, rgba(188,148,102,0) 100%); }
+.faq-item.is-open .faq-item__icon{ transform:rotate(45deg); background:var(--bronze); border-color:var(--bronze); }
+.faq-item.is-open .faq-item__q{ font-weight:600; color:var(--navy); }
+.faq-item.is-open .faq-item__num{ color:var(--bronze-dark); font-weight:700; }
+.faq-item:not(.is-open):hover{ background:linear-gradient(90deg, rgba(188,148,102,.1) 0%, rgba(188,148,102,0) 62%); }
+.faq-item:not(.is-open):hover .faq-item__icon{ border-color:var(--bronze); }
+.faq-item:not(.is-open):hover .faq-item__num{ color:var(--bronze-dark); }
+
+/* ==========================================================================
+   Fale Conosco
+   ========================================================================== */
+.contact-section{ background:var(--bg); padding:56px 24px; }
+.contact-card{
+  position:relative; overflow:hidden; border-radius:32px; padding:96px 0;
+  background:
+    radial-gradient(80% 88% at -8% 112%, rgba(188,148,102,.5) 0%, rgba(188,148,102,.3) 24%, rgba(188,148,102,.14) 46%, rgba(188,148,102,.04) 66%, rgba(188,148,102,0) 80%),
+    radial-gradient(54% 62% at 104% -8%, rgba(188,148,102,.13) 0%, rgba(188,148,102,.04) 44%, rgba(188,148,102,0) 72%),
+    linear-gradient(152deg,var(--navy-2) 0%, var(--navy) 48%, var(--navy-3) 100%);
+}
+.contact-grid{ max-width:var(--container); margin:0 auto; padding:0 60px; position:relative; display:grid; grid-template-columns:5fr 7fr; gap:56px; align-items:stretch; }
+.contact-info{ display:flex; flex-direction:column; gap:16px; height:100%; }
+.contact-info__card{ flex:1; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.13); border-radius:22px; padding:38px 36px; }
+.contact-eyebrow{ font:600 11.5px/1 'Poppins'; letter-spacing:.14em; text-transform:uppercase; color:var(--bronze); margin-bottom:14px; }
+.contact-info__card h2{ font:600 34px/1.1 'Poppins'; letter-spacing:-.022em; color:#fff; margin:0 0 32px; }
+.contact-rows{ display:flex; flex-direction:column; gap:24px; }
+.contact-row{ display:flex; align-items:center; gap:16px; text-decoration:none; }
+.contact-row__icon{
+  flex:none; width:44px; height:44px; border-radius:12px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.13);
+  display:inline-flex; align-items:center; justify-content:center; color:var(--bronze);
+}
+.contact-row__meta{ display:flex; flex-direction:column; gap:6px; }
+.contact-row__label{ font:600 11px/1 'Poppins'; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.5); }
+.contact-row__value{ font:500 16px/1.5 'Poppins'; color:#fff; }
+.contact-social{ flex:none; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.13); border-radius:22px; padding:24px 32px; display:flex; align-items:center; justify-content:center; gap:16px; }
+.contact-social__item{
+  width:54px; height:54px; border-radius:14px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.15);
+  display:inline-flex; align-items:center; justify-content:center; color:#fff; cursor:pointer;
+  transition:transform 280ms var(--ease), background-color 280ms, border-color 280ms, color 280ms, box-shadow 280ms;
+}
+.contact-social__item:hover{ transform:translateY(-4px); background:var(--bronze); border-color:var(--bronze); color:var(--navy); box-shadow:0 16px 28px -16px rgba(188,148,102,.75); }
+.contact-form{ background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.14); border-radius:22px; padding:38px 40px; }
+.contact-form__fields{ display:flex; flex-direction:column; gap:18px; }
+.field label{ display:block; font:500 13px/1 'Poppins'; color:rgba(255,255,255,.72); margin-bottom:9px; }
+.field input, .field textarea{
+  width:100%; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.2); border-radius:12px;
+  transition:border-color 240ms, background-color 240ms, box-shadow 240ms; padding:0 16px; font:400 15px/1 'Poppins';
+  color:#fff; outline:none; height:50px;
+}
+.field textarea{ height:auto; padding:14px 16px; line-height:1.6; resize:vertical; font-family:'Poppins'; }
+.field input::placeholder, .field textarea::placeholder{ color:rgba(255,255,255,.4); }
+.field input:focus, .field textarea:focus{ border-color:var(--bronze); background:rgba(255,255,255,.1); box-shadow:0 0 0 3px rgba(188,148,102,.18); }
+.submit-btn{
+  align-self:flex-start; height:48px; padding:0 26px; background:var(--bronze); color:var(--navy); border:none;
+  border-radius:12px; font:500 15px/1 'Poppins'; cursor:pointer; transition:background 200ms, color 200ms;
+  margin-top:4px; display:inline-flex; align-items:center; justify-content:center; gap:9px;
+}
+.submit-btn:hover{ background:#fff; }
+.submit-btn__spinner{ width:15px; height:15px; border:2px solid rgba(13,26,72,.3); border-top-color:var(--navy); border-radius:50%; animation:gnSpin .7s linear infinite; }
+.form-msg{ font:500 13px/1.4 'Poppins'; margin-top:6px; }
+.form-msg--error{ color:#ff9a9a; }
+.form-msg--success{ display:flex; align-items:center; gap:8px; color:var(--bronze); }
+.form-msg--success .check{ width:18px; height:18px; border-radius:50%; background:var(--bronze); color:var(--navy); display:flex; align-items:center; justify-content:center; font-size:11px; }
+.form-msg--success .note{ color:rgba(255,255,255,.4); }
+[hidden]{ display:none !important; }
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer{ position:relative; background:var(--bg); padding:56px 0 0; border-top:1px solid rgba(13,26,72,.08); }
+.footer-grid{ max-width:1320px; margin:0 auto; padding:0 60px; display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:48px; padding-bottom:52px; }
+.footer-brand img{ height:44px; width:auto; margin-bottom:22px; }
+.footer-brand p{ font:400 16px/1.62 'Poppins'; color:rgba(13,26,72,.55); margin:0 0 26px; max-width:32ch; }
+.footer-cta{ display:inline-flex; align-items:center; gap:8px; background:var(--navy); color:#fff; height:44px; padding:0 20px; border-radius:12px; font:500 14px/1 'Poppins'; transition:background 200ms, color 200ms; }
+.footer-cta:hover{ background:var(--bronze); color:var(--navy); }
+.footer-col-title{ font:600 11.5px/1 'Poppins'; letter-spacing:.14em; text-transform:uppercase; color:rgba(13,26,72,.4); margin-bottom:20px; }
+.footer-links{ display:flex; flex-direction:column; gap:14px; }
+.footer-links a{ font:500 15px/1 'Poppins'; color:rgba(13,26,72,.7); transition:color 200ms; display:inline-flex; align-items:center; gap:6px; }
+.footer-links a:hover{ color:var(--bronze-dark); }
+.footer-ecosystem{ max-width:1320px; margin:0 auto; padding:0 60px; display:flex; align-items:center; gap:14px; flex-wrap:wrap; padding-bottom:34px; }
+.footer-ecosystem__label{ font:600 11.5px/1 'Poppins'; letter-spacing:.14em; text-transform:uppercase; color:rgba(13,26,72,.4); margin-right:8px; }
+.footer-brand-pill{
+  display:flex; align-items:center; gap:11px; height:58px; padding:0 20px; border:1px solid rgba(13,26,72,.1);
+  border-radius:14px; background:#fff; transition:transform 300ms var(--ease), border-color 300ms, box-shadow 300ms;
+}
+.footer-brand-pill:hover{ transform:translateY(-3px); }
+.footer-brand-pill__dot{ width:8px; height:8px; border-radius:50%; }
+.footer-brand-pill span:last-child{ font:600 14px/1 'Poppins'; letter-spacing:-.01em; color:var(--navy); }
+.footer-bottom{
+  max-width:1320px; margin:0 auto; padding:26px 60px 34px; display:flex; align-items:center; justify-content:space-between;
+  gap:32px; flex-wrap:wrap; border-top:1px solid rgba(13,26,72,.09);
+}
+.footer-bottom__copy{ font:400 13px/1.5 'Poppins'; color:rgba(13,26,72,.45); }
+.footer-bottom__links{ display:flex; align-items:center; gap:22px; flex-wrap:wrap; }
+.footer-bottom__links a{ font:500 13px/1 'Poppins'; color:rgba(13,26,72,.5); transition:color 200ms; }
+.footer-bottom__links a:hover{ color:var(--bronze-dark); }
+.footer-bottom__sep{ width:4px; height:4px; border-radius:50%; background:rgba(13,26,72,.2); }
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width:1024px){
+  .site-header{ width:calc(100% - 32px); }
+  .site-header__nav{ display:none; }
+  .site-header__group-link{ display:none; }
+  .site-header__divider{ display:none; }
+  .site-header__burger{ display:flex; }
+
+  .about-grid{ grid-template-columns:1fr; gap:48px; }
+  .about-right{ padding-top:0; }
+
+  .services-head{ grid-template-columns:1fr; gap:24px; align-items:start; }
+  .services-grid{ grid-template-columns:repeat(2,1fr); }
+  .service-card, .service-card--wide{ grid-column:span 1; }
+
+  .bpo-head{ grid-template-columns:1fr; gap:24px; }
+  .bpo-body{ grid-template-columns:1fr; gap:40px; }
+  .bpo-panel{ padding:44px 32px 48px; }
+
+  .faq-card{ padding:64px 36px; }
+  .faq-grid{ grid-template-columns:1fr; gap:36px; }
+
+  .contact-grid{ grid-template-columns:1fr; padding:0 32px; }
+
+  .footer-grid{ grid-template-columns:1fr 1fr; padding:0 36px 40px; gap:36px; }
+}
+
+@media (max-width:768px){
+  .container{ padding:0 20px; }
+  .hero-section{ padding:92px 16px 40px; }
+  .hero-frame{ border-radius:26px; align-items:flex-start; min-height:620px; }
+  .hero-frame__content{ padding:36px 28px 100px; }
+  .hero-actions{ flex-direction:column; align-items:stretch; }
+  .hero-actions .btn{ justify-content:center; width:100%; }
+  .hero-frame__play{ right:16px; bottom:16px; }
+
+  .about-card{ padding:56px 28px; }
+  .about-columns{ grid-template-columns:1fr; gap:28px; }
+
+  .services-section{ padding:48px 0; }
+  .services-grid{ grid-template-columns:1fr; }
+
+  .bpo-section, .faq-section, .contact-section{ padding:40px 16px; }
+  .bpo-panel{ padding:36px 22px 40px; border-radius:24px; }
+  .bpo-item{ grid-template-columns:26px 1fr 16px; gap:10px; }
+  .bpo-item__name{ font-size:16px; }
+
+  .faq-card{ padding:48px 22px; border-radius:24px; }
+
+  .contact-grid{ padding:0 22px; gap:32px; }
+  .contact-info__card, .contact-form{ padding:28px 24px; }
+
+  .footer-grid{ grid-template-columns:1fr; padding:0 22px 32px; }
+  .footer-ecosystem, .footer-bottom{ padding-left:22px; padding-right:22px; }
+}
+
+@media (max-width:480px){
+  .hero-title{ font-size:clamp(30px,9vw,40px); }
+  .services-head h2{ font-size:clamp(26px,7vw,34px); }
+  .bpo-head h2{ font-size:clamp(24px,7vw,32px); }
+  .about-title{ font-size:clamp(34px,11vw,48px); }
+  .faq-head h2{ font-size:clamp(24px,7vw,32px); }
+  .footer-ecosystem{ gap:10px; }
+  .footer-brand-pill{ height:48px; padding:0 14px; }
+
+  /* Below ~480px the inline header CTA has nowhere left to breathe next to
+     the logo + burger — drop it here same as the source 390/320 frames;
+     the drawer's own full-width CTA covers the same action. */
+  .site-header__inner{ padding:0 10px 0 16px; gap:10px; }
+  .site-header__cta{ display:none; }
+}
