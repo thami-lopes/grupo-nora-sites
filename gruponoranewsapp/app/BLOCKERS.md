@@ -10,7 +10,6 @@ issues from the beta being tracked for the client to resolve before launch.
 | Capa é placeholder (gradiente + símbolo Nora) | Todos os cards | Enviar as capas aprovadas de cada post | Sim |
 | Nora Invest sem cor oficial válida | Card 4 e 7 | Confirmar hexa (o brandbook traz `#BB88D42`, inválido) | Sim |
 | Categoria "Gestão Hospitalar" sem posts | Filtro | Publicar conteúdo ou remover a categoria | Não |
-| Endereço fictício ("Rua Teste Exemplo, 123…") | Contato | Fornecer endereço real antes do launch | Sim |
 | Redes sociais sem destino | Contato | Fornecer URLs de Instagram, Facebook e LinkedIn | Parcial |
 | Linha legal em inglês ("All Rights Reserved") | Footer | Aprovação legal / versão pt-BR | Não |
 

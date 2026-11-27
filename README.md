@@ -45,7 +45,7 @@ O site de Educação tem páginas de curso, checkout e formulários que usam rot
 
 ## Pontos para revisar
 
-- Vários textos de contato ainda são provisórios (endereço de exemplo "Rua Teste Exemplo, 123", ícones de redes sociais e "Política de privacidade" sem destino, no Grupo Nora, Care, Capital e Safe).
+- Vários textos de contato ainda são provisórios (ícones de redes sociais e "Política de privacidade" sem destino, no Grupo Nora, Care, Capital e Safe).
 - As fotos de "Nosso Espaço" (Grupo Nora) e de "Instalações" (Educação) são imagens de projeto 3D do escritório novo, não fotos reais.
 - O vídeo do topo (`hero-nora-care.mp4`, cerca de 19 MB) se repete em Care, Capital e Safe. Em produção vale hospedá-lo uma vez só (CDN ou armazenamento de arquivos).
 - Nenhum site usa chave de API ou serviço externo, exceto o Mercado Pago (Educação) e as fontes do Google (Poppins).

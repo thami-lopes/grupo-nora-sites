@@ -140,6 +140,11 @@ export const CONTACT = {
     'https://wa.me/5521980818818?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es',
   whatsappLabel: '(21) 98081-8818',
   email: 'contato@gruponora.com.br',
-  // Placeholder from the source beta — real address pending, see BLOCKERS.md.
-  addressLines: ['Rua Teste Exemplo, 123', 'Rio de Janeiro/RJ', 'CEP 12345-678'],
+  addressLines: [
+    'O2 Corporate & Offices',
+    'Av. José Silva de Azevedo Neto, 200',
+    'Bloco 04 – Salas 303 e 304',
+    'Barra da Tijuca – Rio de Janeiro/RJ',
+    'CEP: 22775-056',
+  ],
 };

@@ -165,11 +165,15 @@ export default function Contato() {
                   <span className={styles.infoText}>
                     <span className={styles.infoLabel}>Endereço</span>
                     <span className={styles.infoValue}>
-                      Rua Teste Exemplo, 123
+                      O2 Corporate &amp; Offices
                       <br />
-                      Rio de Janeiro/RJ
+                      Av. José Silva de Azevedo Neto, 200
                       <br />
-                      CEP 12345-678
+                      Bloco 04 – Salas 303 e 304
+                      <br />
+                      Barra da Tijuca – Rio de Janeiro/RJ
+                      <br />
+                      CEP: 22775-056
                     </span>
                   </span>
                 </div>
