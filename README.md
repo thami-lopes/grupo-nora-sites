@@ -5,7 +5,7 @@ Cinco sites do Grupo Nora, cada um em sua pasta, independentes entre si, mais o 
 | Site | Pasta | Tecnologia | Porta local | Comando |
 |---|---|---|---|---|
 | Grupo Nora (home + News em `/news`) | `gruponorasite/site` | Next.js 16 (React 19) | 3000 | `npm run dev` |
-| Nora Care | `noracaresite/site` | Next.js 16 (React 19) | 3001 | `npm run dev` |
+| Nora Care (**produção**) | repositório `contadoc-org/noracare-site` (fora desta pasta) | Next.js 16 + TypeScript + Tailwind | 3001 | `npx next dev -p 3001` |
 | Nora Capital | `noracapitalsite/site` | HTML/CSS/JS estático | 3002 | `npm run dev` |
 | Nora Safe | `norasafesite/site` | HTML/CSS/JS estático | 3003 | `npm run dev` |
 | Nora Educação | `noraeducacaosite/site` | Next.js 16 (React 19) | 3005 | `npm run dev` |
@@ -29,7 +29,7 @@ Capital e Safe são páginas estáticas: o `npm run dev` só serve os arquivos c
 Os links entre os sites estão apontando para `http://localhost:300X/`. Troque pelos endereços reais:
 
 - Grupo Nora: `gruponorasite/site/lib/siteLinks.js` (o link do News é `/news`, no próprio site)
-- Care: `noracaresite/site/app/lib/siteLinks.js`
+- Care: o site de produção (`noracare-site`) é um projeto à parte; os links para ele saem dos outros sites (acima)
 - Educação: `noraeducacaosite/site/app/lib/siteLinks.js`
 - Capital e Safe: procurar por `localhost:300` em `noracapitalsite/site/index.html` e `norasafesite/site/index.html`
 
@@ -58,3 +58,7 @@ O site de Educação tem páginas de curso, checkout e formulários que usam rot
 - As fotos de "Nosso Espaço" (Grupo Nora) e de "Instalações" (Educação) são imagens de projeto 3D do escritório novo, não fotos reais.
 - O vídeo do topo (`hero-nora-care.mp4`, cerca de 19 MB) se repete em Care, Capital e Safe. Em produção vale hospedá-lo uma vez só (CDN ou armazenamento de arquivos).
 - Nenhum site usa chave de API ou serviço externo, exceto o Mercado Pago (Educação) e as fontes do Google (Poppins).
+
+## Arquivo: Care de demonstração
+
+A partir de agora o Care usado é o de **produção** (`contadoc-org/noracare-site`, em site.noracare.com.br). A versão de demonstração que fazíamos aqui foi arquivada em `_arquivo/noracaresite-demo/` (não é mais mantida; também existe, só para consulta, na branch `demo/grupo-nora-care` do `noracare-site`). Para ver os sites ligados localmente, rode o `noracare-site` na porta 3001: `npx next dev -p 3001`.
