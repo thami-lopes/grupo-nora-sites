@@ -70,7 +70,6 @@
 
 .navLink:hover {
   color: var(--edu-dark);
-  font-weight: 700;
 }
 
 .actions {
